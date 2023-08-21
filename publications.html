@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>RIPAAP-DEMO</title>
+    <link rel="shortcut icon" href="public/img/ripfavicon.png">
+    <!--link rel="stylesheet" href="public/fontawesome-5.15/css/all.min.css" /-->
+    <link rel="stylesheet" href="public/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="public/css/datatables.min.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
+	<style>
+	li{
+		font-size: 1.2em;
+		margin-bottom:10px;
+	}
+	</style>
+</head>
+
+<!-- 
+
+    Page 1
+
+RIPAAP
+
+Reference Intervals for Pediatric and Adult African Populations
+
+Search Database
+
+
+
+
+ -->
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow mt-2 rip-nav-pill px-3 mx-1">
+        <a class="navbar-brand" href="#">
+            <img src="public/img/ripaap_logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            RIPAAP
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ml-md-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="search.html">Search</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Publication References</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li> -->
+                <!-- <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li> -->
+            </ul>
+            <div class="my-2 my-lg-0">
+                <a href="login.html" class="btn btn-outline-danger my-2 my-sm-0">Login</a>
+            </div>
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+        </div>
+    </nav>
+
+
+    <section id="main">
+        <div class="container rip-stretch-heigth  pt-3">
+		<div class="my-4">
+		<h1>Publications</h1>
+		</div>
+            
+		<ol id="pubListing">
+		</ol>
+			
+		</div>
+			
+    </section>
+
+
+
+
+    <footer class="page-footer font-small rip-bg-info pt-1 mt-3 rounded">
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-4 mt-md-2 mt-3">
+
+                    <!-- Content -->
+                    <span>A product of </span> <br>
+                    <a href="#" class="text-uppercase mt-0 h5 pl-2">Sarpong Labs</a>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none pb-3">
+
+                <div class="col-12 col-md-8 footer-copyright h5 pt-3">
+                    Copyright &copy; 2023 <a href="#">Sarpong Labs.</a> All rights reserved.
+                </div>
+
+                <!-- Grid column -->
+                <!-- <div class="col-md-3 mb-md-0 mb-3">
+
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                    </ul>
+
+                </div> -->
+                <!-- Grid column -->
+
+                <!-- <div class="col-md-3 mb-md-0 mb-3">
+
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                    </ul>
+
+                </div> -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <!-- <div class="footer-copyright text-center py-0">© 2020 Copyright:
+            <a href="/"> MDBootstrap.com</a>
+        </div> -->
+
+
+    </footer>
+
+
+</body>
+<script src="public/js/jquery-3.7.0.min.js"></script>
+<!-- <script src="js/jquery.singlePageNav.min.js"></script> -->
+<script src="public/js/bootstrap.min.js"></script>
+<script src="public/js/datatables.min.js"></script>
+<script>
+    $(document).ready(function () {
+	
+	for(let i=1;i<11;i++){
+		const node = document.createElement("li");
+		node.innerHTML=`Author1Sname, A. & Author2Sname B. (2013). 
+		Publication ${i} Title: Publication ${i} Subtitle. Journal Name,13, 1442-1452.
+		<a href="https://doi.org/10.1177/104973232546984">https://doi.org/10.1177/104973232546984<a/>`;
+
+document.getElementById("pubListing").appendChild(node);
+	}
+
+    });
+</script>
+
+</html>
