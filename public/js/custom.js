@@ -6,7 +6,8 @@
 	$(window).on('load', function () {
 		$('#js-preloader').addClass('loaded');
 		$(document).ready(function() {
-			$('.features').select2();
+			// $('.features').select2();
+			// $("#filtersModal").modal('show');
 		});
 	});
 
@@ -15,17 +16,21 @@
 		const scroll = $(window).scrollTop();
 		const box = $('.quick-links').height();
 		const header = $('header').height();
-		const footer = $('footer').height();
-		const properties = $('.properties').height();
+		const biger = $('body').height();
+		let properties = $('.properties').height();
 
 
 		if (scroll >= box - header) {
 			$("header").addClass("background-header");
 		} else {
-
+			
 			$("header").removeClass("background-header");
 		}
-		if (scroll >= properties - header) {
+		if(properties>2500){
+			properties+=500;
+		}
+		if (scroll >= biger - box - properties) {
+			// console.log(scroll,properties,header)
 			$(".filters").show();
 		} else {
 			$(".filters").hide();
