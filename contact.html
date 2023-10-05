@@ -10,14 +10,14 @@
     <title>Villa Agency TemplateMo - Contact Page</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="public/css/fontawesome.css">
+    <link rel="stylesheet" href="public/css/templatemo-villa-agency.css">
+    <link rel="stylesheet" href="public/css/owl.css">
+    <link rel="stylesheet" href="public/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 <!--
 
@@ -31,7 +31,7 @@ https://templatemo.com/tm-591-villa-agency
 <body>
 
   <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
+  <!-- <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
       <div class="dots">
@@ -40,7 +40,7 @@ https://templatemo.com/tm-591-villa-agency
         <span></span>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- ***** Preloader End ***** -->
 
   <div class="sub-header">
@@ -48,16 +48,20 @@ https://templatemo.com/tm-591-villa-agency
       <div class="row">
         <div class="col-lg-8 col-md-8">
           <ul class="info">
-            <li><i class="fa fa-envelope"></i> info@company.com</li>
-            <li><i class="fa fa-map"></i> Sunny Isles Beach, FL 33160</li>
+            <li><i class="fa fa-envelope text-primary"></i> info@ronaproperties.com</li>
+            <li><i class="fa fa-map text-primary"></i> Accra Sunny Side Lane, SL 33160</li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-4">
           <ul class="social-links">
-            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://x.com/minthu" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#" class="rounded rounded-pill px-1">
+                <i class="fa fa-heart"></i> Favorites
+                <span class="badge rounded-pill bg-secondary">0</span>
+              </a></li>
+            <li><a href="#" class="rounded rounded-pill px-1">
+                <i class="fa fa-home"></i> Saved
+                <span class="badge rounded-pill bg-secondary">0</span>
+              </a></li>
           </ul>
         </div>
       </div>
@@ -67,29 +71,32 @@ https://templatemo.com/tm-591-villa-agency
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <h1>Villa</h1>
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="properties.html">Properties</a></li>
-                      <li><a href="property-details.html">Property Details</a></li>
-                      <li><a href="contact.html" class="active">Contact Us</a></li>
-                      <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
-                  </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
+      <div class="row mt-3">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo h3">
+              <img src="public/img/rona_logo.png"
+                style="height: 50px; width: 50px; object-fit: contain;display: inline;" alt="">
+              <span>Rona Properties</span>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav me-0 ms-auto">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="#contact.html">Properties</a></li>
+              <li><a href="property-details.html">Property Details</a></li>
+              <li><a href="#contact.html">Contact Us</a></li>
+              <li><a href="#"><i class="fa fa-user"></i>Login</a></li>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
         </div>
+      </div>
+      <!-- -------------------------------  -->
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
@@ -117,13 +124,13 @@ https://templatemo.com/tm-591-villa-agency
           <div class="row">
             <div class="col-lg-12">
               <div class="item phone">
-                <img src="assets/images/phone-icon.png" alt="" style="max-width: 52px;">
+                <img src="public/img/phone-icon.png" alt="" style="max-width: 52px;">
                 <h6>010-020-0340<br><span>Phone Number</span></h6>
               </div>
             </div>
             <div class="col-lg-12">
               <div class="item email">
-                <img src="assets/images/email-icon.png" alt="" style="max-width: 52px;">
+                <img src="public/img/email-icon.png" alt="" style="max-width: 52px;">
                 <h6>info@villa.co<br><span>Business Email</span></h6>
               </div>
             </div>
@@ -174,23 +181,28 @@ https://templatemo.com/tm-591-villa-agency
   </div>
 
   <footer>
-    <div class="container">
-      <div class="col-lg-12">
-        <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. 
-        
-        Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+    <div class="container px-5">
+      <div class="row pt-4 text-white">
+        <div class="col-8">
+          &copy; 2023 Rona Properties
+        </div>
+        <div class="col-4 text-end">
+          <i class="fab fa-facebook-square fa-xl"></i>
+          <i class="fab fa-twitter-square fa-xl"></i>
+          <i class="fab fa-instagram-square fa-xl"></i>
+        </div>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="public/vendor/jquery/jquery.min.js"></script>
+  <script src="public/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="public/js/isotope.min.js"></script>
+  <script src="public/js/owl-carousel.js"></script>
+  <script src="public/js/counter.js"></script>
+  <script src="public/js/custom.js"></script>
 
   </body>
 </html>

@@ -10,13 +10,13 @@
     <title>Villa Agency - Property Listing by TemplateMo</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="public/css/fontawesome.css">
+    <link rel="stylesheet" href="public/css/templatemo-villa-agency.css">
+    <link rel="stylesheet" href="public/css/owl.css">
+    <link rel="stylesheet" href="public/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 <!--
 
@@ -47,16 +47,20 @@ https://templatemo.com/tm-591-villa-agency
       <div class="row">
         <div class="col-lg-8 col-md-8">
           <ul class="info">
-            <li><i class="fa fa-envelope"></i> info@company.com</li>
-            <li><i class="fa fa-map"></i> Sunny Isles Beach, FL 33160</li>
+            <li><i class="fa fa-envelope text-primary"></i> info@ronaproperties.com</li>
+            <li><i class="fa fa-map text-primary"></i> Accra Sunny Side Lane, SL 33160</li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-4">
           <ul class="social-links">
-            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://x.com/minthu" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#" class="rounded rounded-pill px-1">
+                <i class="fa fa-heart"></i> Favorites
+                <span class="badge rounded-pill bg-secondary">0</span>
+              </a></li>
+            <li><a href="#" class="rounded rounded-pill px-1">
+                <i class="fa fa-home"></i> Saved
+                <span class="badge rounded-pill bg-secondary">0</span>
+              </a></li>
           </ul>
         </div>
       </div>
@@ -66,29 +70,32 @@ https://templatemo.com/tm-591-villa-agency
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <h1>Villa</h1>
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="properties.html" class="active">Properties</a></li>
-                      <li><a href="property-details.html">Property Details</a></li>
-                      <li><a href="contact.html">Contact Us</a></li>
-                      <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
-                  </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
+      <div class="row mt-3">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo h3">
+              <img src="public/img/rona_logo.png"
+                style="height: 50px; width: 50px; object-fit: contain;display: inline;" alt="">
+              <span>Rona Properties</span>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav me-0 ms-auto">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="properties.html">Properties</a></li>
+              <li><a href="property-details.html">Property Details</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#"><i class="fa fa-user"></i>Login</a></li>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
         </div>
+      </div>
+      <!-- -------------------------------  -->
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
@@ -104,29 +111,100 @@ https://templatemo.com/tm-591-villa-agency
     </div>
   </div>
 
-  <div class="section properties">
+
+  <div class="container-fluid bg-white p-3 my-3">
     <div class="container">
-      <ul class="properties-filter">
-        <li>
-          <a class="is_active" href="#!" data-filter="*">Show All</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".adv">Apartment</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".str">Villa House</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".rac">Penthouse</a>
-        </li>
-      </ul>
-      <div class="row properties-box">
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 adv">
+      <div class="row justify-content-center">
+
+        <div class="col-5 col-md-2">
+          <div class="input-group">
+            <label class="input-group-text" for="inputGroupSelect01"> <i class="fa fa-bed fa-lg"></i></label>
+            <select class="form-select" id="inputGroupSelect01">
+              <option value="0" selected>Any</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8+</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-5 col-md-2">
+          <div class="input-group">
+            <label class="input-group-text" for="inputGroupSelect01"> <i class="fa fa-shower fa-lg"></i></label>
+            <select class="form-select" id="inputGroupSelect01">
+              <option value="0" selected>Any</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8+</option>
+            </select>
+          </div>
+        </div>
+        <div class="d-none d-md-block col-2">
+          <div class="input-group">
+            <label class="input-group-text" for="inputGroupSelect01"> <i class="fa fa-clock fa-lg"></i></label>
+            <select class="form-select" id="inputGroupSelect01">
+              <option value="0" selected>Short Stay</option>
+              <option value="1">Rent</option>
+            </select>
+          </div>
+        </div>
+        <div class="d-none d-md-block col-3">
+          <div class="input-group">
+            <span class="input-group-text">Price</span>
+            <input type="text" aria-label="First name" class="form-control" placeholder="Min">
+            <input type="text" aria-label="Last name" class="form-control" placeholder="Max">
+          </div>
+        </div>
+        <div class="col-2 col-md-1">
+          <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#filtersModal"><i
+              class="fa fa-list-dots"></i></button>
+        </div>
+        <div class="col-4 col-md-1 mt-2 mt-md-0">
+          <button class="btn btn-primary w-100 rounded rounded-pill"><i class="fa fa-magnifying-glass"></i></button>
+        </div>
+        <!-- <div class="col-4">
+          <div class="input-group">
+            <select class="features form-select form-control" name="features[]" multiple="multiple">
+              <option value="AL">Private Bathroom</option>
+              <option value="WY">AC</option>
+              <option value="WY">Kitchen</option>
+            </select>
+          </div>
+        </div> -->
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="properties">
+    <div class="container-fluid px-5">
+      <!-- <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+          <div class="section-heading text-center">
+            <h6>| Properties</h6>
+            <h2>We Provide The Best Property You Like</h2>
+          </div>
+        </div>
+      </div> -->
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
           <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-01.jpg" alt=""></a>
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-danger"></i></div>
+            <a href="property-details.html"><img src="public/img/property-01.jpg" alt=""></a>
             <span class="category">Luxury Villa</span>
-            <h6>$2.264.000</h6>
-            <h4><a href="property-details.html">18 Old Street Miami, OR 97219</a></h4>
+            <h6>$30.00</h6>
+            <h4><a href="property-details.html">18 New Street Miami, OR 97219</a></h4>
             <ul>
               <li>Bedrooms: <span>8</span></li>
               <li>Bathrooms: <span>8</span></li>
@@ -134,17 +212,18 @@ https://templatemo.com/tm-591-villa-agency
               <li>Floor: <span>3</span></li>
               <li>Parking: <span>6 spots</span></li>
             </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+        <div class="col-lg-3 col-md-6">
           <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-02.jpg" alt=""></a>
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-02.jpg" alt=""></a>
             <span class="category">Luxury Villa</span>
             <h6>$1.180.000</h6>
-            <h4><a href="property-details.html">54 New Street Florida, OR 27001</a></h4>
+            <h4><a href="property-details.html">54 Mid Street Florida, OR 27001</a></h4>
             <ul>
               <li>Bedrooms: <span>6</span></li>
               <li>Bathrooms: <span>5</span></li>
@@ -152,17 +231,18 @@ https://templatemo.com/tm-591-villa-agency
               <li>Floor: <span>3</span></li>
               <li>Parking: <span>8 spots</span></li>
             </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 adv rac">
+        <div class="col-lg-3 col-md-6">
           <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-03.jpg" alt=""></a>
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-03.jpg" alt=""></a>
             <span class="category">Luxury Villa</span>
             <h6>$1.460.000</h6>
-            <h4><a href="property-details.html">26 Mid Street Portland, OR 38540</a></h4>
+            <h4><a href="property-details.html">26 Old Street Miami, OR 38540</a></h4>
             <ul>
               <li>Bedrooms: <span>5</span></li>
               <li>Bathrooms: <span>4</span></li>
@@ -170,17 +250,18 @@ https://templatemo.com/tm-591-villa-agency
               <li>Floor: <span>3</span></li>
               <li>Parking: <span>10 spots</span></li>
             </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
+        <div class="col-lg-3 col-md-6">
           <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-04.jpg" alt=""></a>
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-04.jpg" alt=""></a>
             <span class="category">Apartment</span>
             <h6>$584.500</h6>
-            <h4><a href="property-details.html">12 Hope Street Portland, OR 12650</a></h4>
+            <h4><a href="property-details.html">12 New Street Miami, OR 12650</a></h4>
             <ul>
               <li>Bedrooms: <span>4</span></li>
               <li>Bathrooms: <span>3</span></li>
@@ -188,17 +269,18 @@ https://templatemo.com/tm-591-villa-agency
               <li>Floor: <span>25th</span></li>
               <li>Parking: <span>2 cars</span></li>
             </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac str">
+        <div class="col-lg-3 col-md-6">
           <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-05.jpg" alt=""></a>
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-05.jpg" alt=""></a>
             <span class="category">Penthouse</span>
             <h6>$925.600</h6>
-            <h4><a href="property-details.html">34 Hope Street Portland, OR 42680</a></h4>
+            <h4><a href="property-details.html">34 Beach Street Miami, OR 42680</a></h4>
             <ul>
               <li>Bedrooms: <span>4</span></li>
               <li>Bathrooms: <span>4</span></li>
@@ -206,17 +288,18 @@ https://templatemo.com/tm-591-villa-agency
               <li>Floor: <span>38th</span></li>
               <li>Parking: <span>2 cars</span></li>
             </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac adv">
+        <div class="col-lg-3 col-md-6">
           <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-06.jpg" alt=""></a>
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-06.jpg" alt=""></a>
             <span class="category">Modern Condo</span>
             <h6>$450.000</h6>
-            <h4><a href="property-details.html">22 Hope Street Portland, OR 16540</a></h4>
+            <h4><a href="property-details.html">22 New Street Portland, OR 16540</a></h4>
             <ul>
               <li>Bedrooms: <span>3</span></li>
               <li>Bathrooms: <span>2</span></li>
@@ -224,66 +307,70 @@ https://templatemo.com/tm-591-villa-agency
               <li>Floor: <span>26th</span></li>
               <li>Parking: <span>3 cars</span></li>
             </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac str">
+        <div class="col-lg-3 col-md-6">
           <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-03.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$980.000</h6>
-            <h4><a href="property-details.html">14 Mid Street Miami, OR 36450</a></h4>
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-04.jpg" alt=""></a>
+            <span class="category">Apartment</span>
+            <h6>$584.500</h6>
+            <h4><a href="property-details.html">12 New Street Miami, OR 12650</a></h4>
             <ul>
-              <li>Bedrooms: <span>8</span></li>
-              <li>Bathrooms: <span>8</span></li>
-              <li>Area: <span>550m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>12 spots</span></li>
+              <li>Bedrooms: <span>4</span></li>
+              <li>Bathrooms: <span>3</span></li>
+              <li>Area: <span>125m2</span></li>
+              <li>Floor: <span>25th</span></li>
+              <li>Parking: <span>2 cars</span></li>
             </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac adv">
+        <div class="col-lg-3 col-md-6">
           <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-02.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$1.520.000</h6>
-            <h4><a href="property-details.html">26 Old Street Miami, OR 12870</a></h4>
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-05.jpg" alt=""></a>
+            <span class="category">Penthouse</span>
+            <h6>$925.600</h6>
+            <h4><a href="property-details.html">34 Beach Street Miami, OR 42680</a></h4>
             <ul>
-              <li>Bedrooms: <span>12</span></li>
-              <li>Bathrooms: <span>15</span></li>
-              <li>Area: <span>380m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>14 spots</span></li>
+              <li>Bedrooms: <span>4</span></li>
+              <li>Bathrooms: <span>4</span></li>
+              <li>Area: <span>180m2</span></li>
+              <li>Floor: <span>38th</span></li>
+              <li>Parking: <span>2 cars</span></li>
             </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac adv">
+        <!-- <div class="col-lg-3 col-md-6">
           <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-01.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$3.145.000</h6>
-            <h4><a href="property-details.html">34 New Street Miami, OR 24650</a></h4>
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-06.jpg" alt=""></a>
+            <span class="category">Modern Condo</span>
+            <h6>$450.000</h6>
+            <h4><a href="property-details.html">22 New Street Portland, OR 16540</a></h4>
             <ul>
-              <li>Bedrooms: <span>10</span></li>
-              <li>Bathrooms: <span>12</span></li>
-              <li>Area: <span>860m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>10 spots</span></li>
+              <li>Bedrooms: <span>3</span></li>
+              <li>Bathrooms: <span>2</span></li>
+              <li>Area: <span>165m2</span></li>
+              <li>Floor: <span>26th</span></li>
+              <li>Parking: <span>3 cars</span></li>
             </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> ->
           </div>
-        </div>
+        </div> -->
       </div>
+
       <div class="row">
         <div class="col-lg-12">
           <ul class="pagination">
@@ -294,27 +381,247 @@ https://templatemo.com/tm-591-villa-agency
           </ul>
         </div>
       </div>
+
     </div>
   </div>
 
+
+
+
+
+  <div class="modal fade" id="filtersModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog rona-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Filters</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p style="font-size: 1.4em;" class="text-black my-3">Price Range ($)</p>
+          <div class="row ps-4">
+            <div class="col-5">
+              <div class="input-group">
+                <span class="input-group-text">Min</span>
+                <input type="text" aria-label="First name" class="form-control rona-form-control-lg" placeholder="Min">
+              </div>
+            </div>
+            <div class="col-1 text-center py-2">
+              <span class="form-label h3">-</span>
+            </div>
+            <div class="col-5">
+              <div class="input-group">
+                <span class="input-group-text">Max</span>
+                <input type="text" aria-label="First name" class="form-control rona-form-control-lg" placeholder="Min">
+              </div>
+            </div>
+          </div>
+          <hr>
+          <p style="font-size: 1.4em;" class="text-black my-3">
+            Beds & Bathrooms
+          </p>
+
+          <p class="text-black my-2">Bedrooms</p>
+          <div class="numbered-btns ps-4 text-center text-md-start">
+            <div>
+              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoomAny" autocomplete="off" checked>
+              <label class="btn btn-outline-secondary rounded-pill px-0" for="bedRoomAny"> Any</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom1" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom1">1</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom2" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom2">2</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom3" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom3">3</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom4" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom4">4</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom5" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom5">5</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom6" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom6">6</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom7" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom7">7</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom8" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom8">8+</label>
+            </div>
+          </div>
+
+
+          <p class="text-black my-2">Beds</p>
+          <div class="numbered-btns ps-4 text-center text-md-start">
+            <div>
+              <input type="radio" class="btn-check" name="nBeds" id="bedAny" autocomplete="off" checked>
+              <label class="btn btn-outline-secondary rounded-pill px-0" for="bedAny"> Any</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBeds" id="bed1" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bed1">1</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBeds" id="bed2" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bed2">2</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBeds" id="bed3" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bed3">3</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBeds" id="bed4" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bed4">4</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBeds" id="bed5" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bed5">5</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBeds" id="bed6" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bed6">6</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBeds" id="bed7" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bed7">7</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBeds" id="bed8" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bed8">8+</label>
+            </div>
+          </div>
+
+
+          <p class="text-black my-2">Bathrooms</p>
+          <div class="numbered-btns ps-4  text-center text-md-start">
+            <div>
+              <input type="radio" class="btn-check" name="nBathrooms" id="bathAny" autocomplete="off" checked>
+              <label class="btn btn-outline-secondary rounded-pill px-0" for="bathAny"> Any</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBathrooms" id="bath1" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bath1">1</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBathrooms" id="bath2" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bath2">2</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBathrooms" id="bath3" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bath3">3</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBathrooms" id="bath4" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bath4">4</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBathrooms" id="bath5" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bath5">5</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBathrooms" id="bath6" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bath6">6</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBathrooms" id="bath7" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bath7">7</label>
+            </div>
+            <div>
+              <input type="radio" class="btn-check" name="nBathrooms" id="bath8" autocomplete="off">
+              <label class="btn btn-outline-secondary rounded-pill" for="bath8">8+</label>
+            </div>
+          </div>
+
+          <hr>
+          <p style="font-size: 1.4em;" class="text-black my-3">Reservation Type</p>
+          <div class="row">
+            <div class="col-3 col-md-4 text-center">
+              <input type="radio" class="btn-check" name="options-outlined" id="success-outlined3" autocomplete="off"
+                checked>
+              <label class="btn rona-btn-lg btn-outline-secondary" for="success-outlined3"> Any</label>
+            </div>
+            <div class="col-5 col-md-4 text-center">
+              <input type="radio" class="btn-check" name="options-outlined" id="success-outlined1" autocomplete="off">
+              <label class="btn rona-btn-lg btn-outline-secondary" for="success-outlined1"> <i
+                  class="fa fa-building"></i> Short Stay</label>
+            </div>
+            <div class="col-4 text-center">
+              <input type="radio" class="btn-check" name="options-outlined" id="success-outlined2" autocomplete="off">
+              <label class="btn rona-btn-lg btn-outline-secondary" for="success-outlined2"> <i class="fa fa-home"></i>
+                Rent</label>
+            </div>
+          </div>
+          <hr>
+          <p style="font-size: 1.4em;" class="text-black my-3">Amenities</p>
+          <div class="row ps-md-4 ps-2">
+            <div class="col-3 col-md-3 my-1">
+              <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+              <label class="btn btn-outline-secondary" for="btn-check-outlined">Kitchen</label><br>
+            </div>
+            <div class="col-9 col-md-5 my-1">
+              <input type="checkbox" class="btn-check" id="btn-check-outlined2" autocomplete="off">
+              <label class="btn btn-outline-secondary" for="btn-check-outlined2">Private Attached Bathroom</label><br>
+            </div>
+            <div class="col-6 col-md-3 my-1">
+              <input type="checkbox" class="btn-check" id="btn-check-outlined3" autocomplete="off">
+              <label class="btn btn-outline-secondary" for="btn-check-outlined3">Air Conditioning</label><br>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="text-decoration-underline btn btn-outline-dark" data-bs-dismiss="modal">Clear
+            All</button>
+          <button type="button" class="btn btn-dark">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <footer>
-    <div class="container">
-      <div class="col-lg-12">
-        <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. 
-        
-        Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+    <div class="container px-5">
+      <div class="row pt-4 text-white">
+        <div class="col-8">
+          &copy; 2023 Rona Properties
+        </div>
+        <div class="col-4 text-end">
+          <i class="fab fa-facebook-square fa-xl"></i>
+          <i class="fab fa-twitter-square fa-xl"></i>
+          <i class="fab fa-instagram-square fa-xl"></i>
+        </div>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="public/vendor/jquery/jquery.min.js"></script>
+  <script src="public/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="public/js/isotope.min.js"></script>
+  <script src="public/js/owl-carousel.js"></script>
+  <script src="public/js/counter.js"></script>
+  <script src="public/js/custom.js"></script>
 
   </body>
 </html>

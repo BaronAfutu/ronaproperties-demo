@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Rona Properties - Admin</title>
+
+  <!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/"> -->
+
+  <!-- Bootstrap core CSS -->
+  <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="public/css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company name</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+      data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <div class="navbar-nav">
+      <div class="nav-item text-nowrap">
+        <a class="nav-link px-3" href="#">Sign out</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">
+                <span data-feather="home"></span>
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                Bookings
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                <span data-feather="shopping-cart"></span>
+                Listings
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="users"></span>
+                Users
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="bar-chart-2"></span>
+                Reports
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="layers"></span>
+                Integrations
+              </a>
+            </li>
+          </ul>
+
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Saved reports</span>
+            <a class="link-secondary" href="#" aria-label="Add a new report">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Current month
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Last quarter
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Social engagement
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Year-end sale
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+
+      <!-- LISTINGS -->
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-4">
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Listing 1 Title - Listings</h1>
+
+          <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group me-2">
+              <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+            </div>
+            <button type="button" id="editBtn" class="btn btn-sm btn-outline-primary">
+              <span data-feather="edit"></span>
+              Edit
+            </button> &nbsp;
+            <button type="button" class="btn btn-sm btn-outline-danger">
+              <span data-feather="trash"></span>
+              Delete
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-5 px-0 px-xl-2">
+          <form action="#" method="POST" id="filterDataForm">
+
+            <div class="row">
+              <div class="col-6 bg-light position-relative px-0" style="height: 50vh !important;">
+                <img src="public/img/deal-01.jpg" id="displayImage" class="img-fluid object-fit-contain w-100 h-100"
+                  alt="a building">
+                <div class="position-absolute bottom-0 w-100 text-center">
+                  <button class="btn btn-danger"><span data-feather="trash"></span> Delete</button>
+                </div>
+              </div>
+
+              <div class="col-6 py-5 py-xl-3">
+                <div class="row">
+                  <div class="col-4 my-1">
+                    <img src="public/img/deal-01.jpg" alt="a building"
+                      class="img-fluid object-fit-fill w-100 h-100 rounded viewe-image">
+                  </div>
+                  <div class="col-4 my-1">
+                    <img src="public/img/deal-02.jpg" alt="a building"
+                      class="img-fluid object-fit-fill w-100 h-100 rounded viewe-image">
+                  </div>
+                  <div class="col-4 my-1">
+                    <img src="public/img/banner-01.jpg" alt="a building"
+                      class="img-fluid object-fit-fill w-100 h-100 rounded viewe-image">
+                  </div>
+                  <div class="col-4 my-1">
+                    <img src="public/img/deal-03.jpg" alt="a building"
+                      class="img-fluid object-fit-fill w-100 h-100 rounded viewe-image">
+                  </div>
+                  <div class="col-4 my-1">
+                    <img src="public/img/banner-02.jpg" alt="a building"
+                      class="img-fluid object-fit-fill w-100 h-100 rounded viewe-image">
+                  </div>
+                  <div class="col-4 my-1">
+                    <img src="public/img/banner-03.jpg" alt="a building"
+                      class="img-fluid object-fit-fill w-100 h-100 rounded viewe-image">
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-4 col-xl-3">
+                    <label for="imageUpload" class="form-label col-form-label-lg pt-1">
+                      Upload images
+                    </label>
+                  </div>
+                  <div class="col-8 col-xl-9">
+                    <input type="file" accept="image/*" multiple="true" max="6" class="form-control" id="imageUpload"
+                      value="Add Pictures" disabled>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+
+        <h1 class="h2 mt-5">Details</h1>
+
+
+        <div class="mt-3 px-0 px-xl-2">
+          <form action="" id="editListingForm" onsubmit="return false">
+            <div class="row">
+              <div class="col-8 border-end py-1" style="max-height: 80vh; overflow: scroll;">
+                <div class="input-group input-group-lg mb-3">
+                  <span class="input-group-text" id="basic-addon1">Title: </span>
+                  <input type="text" class="form-control" value="" aria-label="Username" aria-describedby="basic-addon1"
+                    min="1" disabled>
+                </div>
+
+                <div class="input-group my-3">
+                  <span class="input-group-text">Description</span>
+                  <textarea class="form-control" aria-label="With textarea" disabled></textarea>
+                </div>
+
+                <div class="row">
+
+                  <!--BEDROOMS-->
+                  <div class="col-6">
+                    <h4>Bedrooms</h4>
+                    <div class="my-3 ps-3">
+                      <div class="row">
+                        <div class="col-6">
+
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+
+                          <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text" id="basic-addon1">Rooms</span>
+                            <input type="text" class="form-control" value="" aria-label="Username"
+                              aria-describedby="basic-addon1" min="1" disabled>
+                          </div>
+
+                        </div>
+                        <div class="col-6">
+
+                          <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text" id="basic-addon1">Beds</span>
+                            <input type="text" class="form-control" value="" aria-label="Username"
+                              aria-describedby="basic-addon1" min="1" disabled>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--WASHROOMS-->
+                  <div class="col-6">
+                    <h4>Washrooms</h4>
+                    <div class="my-3 ps-3">
+                      <div class="row">
+                        <div class="col-6">
+
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">
+
+                          <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text" id="basic-addon1">Private</span>
+                            <input type="text" class="form-control" value="" aria-label="Username"
+                              aria-describedby="basic-addon1" min="1" disabled>
+                          </div>
+
+                        </div>
+                        <div class="col-6">
+
+                          <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text" id="basic-addon1">Shared</span>
+                            <input type="text" class="form-control" value="" aria-label="Username"
+                              aria-describedby="basic-addon1" min="1" disabled>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="input-group input-group-lg my-3">
+                  <span class="input-group-text" id="basic-addon1">Property Type: </span>
+                  <input type="text" class="form-control" value="" aria-label="Username" aria-describedby="basic-addon1"
+                    min="1" disabled>
+                </div>
+
+                <div class="my-5">
+                  <h4>Amenities</h4>
+                  <div class="row">
+                    <div class="col-6">
+
+                      <div class="input-group w-75 mx-auto">
+                        <div class="input-group-text">
+                          <input class="form-check-input mt-0" type="checkbox" value="kitchen"
+                            aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input type="text" class="form-control form-control-lg py-0" value="Kitchen"
+                          aria-label="Text input with checkbox" readonly>
+                      </div>
+
+                      <div class="input-group w-75 my-3 mx-auto">
+                        <div class="input-group-text">
+                          <input class="form-check-input mt-0" type="checkbox" value="ac"
+                            aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input type="text" class="form-control form-control-lg py-0" value=""
+                          aria-label="Text input with checkbox" readonly>
+                      </div>
+
+                    </div>
+                    <div class="col-6">
+
+                      <div class="input-group w-75 mx-auto">
+                        <div class="input-group-text">
+                          <input class="form-check-input mt-0" type="checkbox" value="ac"
+                            aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input type="text" class="form-control form-control-lg py-0" value="AC"
+                          aria-label="Text input with checkbox" readonly>
+                      </div>
+
+                      <div class="input-group w-75 my-3 mx-auto">
+                        <div class="input-group-text">
+                          <input class="form-check-input mt-0" type="checkbox" value="ac"
+                            aria-label="Checkbox for following text input" disabled>
+                        </div>
+                        <input type="text" class="form-control form-control-lg py-0" value=""
+                          aria-label="Text input with checkbox" readonly>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="input-group my-5">
+                  <span class="input-group-text">Address</span>
+                  <textarea class="form-control" aria-label="With textarea" disabled></textarea>
+                </div>
+
+                <div class="input-group input-group-lg my-5">
+                  <span class="input-group-text" id="basic-addon1">Ghana Post GPS: </span>
+                  <input type="text" class="form-control" value="" aria-label="Username" aria-describedby="basic-addon1"
+                    min="1" disabled>
+                </div>
+
+                <div>
+                  Select on Map
+                </div>
+
+              </div>
+              <div class="col-4 h-100 text-center">
+                <label class="form-label col-form-label-lg fw-bold">
+                  Price Per Night
+                </label>
+
+                <div class="input-group input-group-lg w-75 mx-auto mb-3">
+                  <span class="input-group-text" id="basic-addon1">GHc</span>
+                  <input type="number" class="form-control" placeholder="0.00" aria-label="Username"
+                    aria-describedby="basic-addon1" id="ppn" min="1" disabled>
+                </div>
+
+                <div class="mt-5 pt-5">
+                  <input type="submit" class="btn btn-lg fw-bold w-75 btn-primary rounded-pill" value="Submit All Changes" disabled>
+                </div>
+
+                <div class="mt-5 pt-5">
+                  <a href="#" class="btn btn-outline-info btn-lg rounded-pill w-75 fw-bold">View Bookings</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="public/vendor/jquery/jquery.min.js"></script>
+  <script src="public/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+    integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+    crossorigin="anonymous"></script>
+  <script src="public/js/dashboard.js"></script>
+</body>
+
+</html>

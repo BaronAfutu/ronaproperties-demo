@@ -7,7 +7,7 @@
 		// $('#js-preloader').addClass('loaded');
 		$(document).ready(function() {
 			// $('.features').select2();
-			// $("#filtersModal").modal('show');
+			// $("#loginModal").modal('show');
 		});
 	});
 
