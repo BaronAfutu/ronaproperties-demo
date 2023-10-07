@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-    <title>Villa Agency - Property Listing by TemplateMo</title>
+  <title>Villa Agency - Property Listing by TemplateMo</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="public/css/fontawesome.css">
-    <link rel="stylesheet" href="public/css/templatemo-villa-agency.css">
-    <link rel="stylesheet" href="public/css/owl.css">
-    <link rel="stylesheet" href="public/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<!--
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="public/css/fontawesome.css">
+  <link rel="stylesheet" href="public/css/templatemo-villa-agency.css">
+  <link rel="stylesheet" href="public/css/owl.css">
+  <link rel="stylesheet" href="public/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <!--
 
 TemplateMo 591 villa agency
 
 https://templatemo.com/tm-591-villa-agency
 
 -->
-  </head>
+</head>
 
 <body>
 
@@ -118,8 +119,8 @@ https://templatemo.com/tm-591-villa-agency
 
         <div class="col-5 col-md-2">
           <div class="input-group">
-            <label class="input-group-text" for="inputGroupSelect01"> <i class="fa fa-bed fa-lg"></i></label>
-            <select class="form-select" id="inputGroupSelect01">
+            <label class="input-group-text" for="bedrooms"> <i class="fa fa-bed fa-lg"></i></label>
+            <select class="form-select" id="bedrooms">
               <option value="0" selected>Any</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -134,8 +135,8 @@ https://templatemo.com/tm-591-villa-agency
         </div>
         <div class="col-5 col-md-2">
           <div class="input-group">
-            <label class="input-group-text" for="inputGroupSelect01"> <i class="fa fa-shower fa-lg"></i></label>
-            <select class="form-select" id="inputGroupSelect01">
+            <label class="input-group-text" for="bathrooms"> <i class="fa fa-shower fa-lg"></i></label>
+            <select class="form-select" id="bathrooms">
               <option value="0" selected>Any</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -150,18 +151,19 @@ https://templatemo.com/tm-591-villa-agency
         </div>
         <div class="d-none d-md-block col-2">
           <div class="input-group">
-            <label class="input-group-text" for="inputGroupSelect01"> <i class="fa fa-clock fa-lg"></i></label>
-            <select class="form-select" id="inputGroupSelect01">
-              <option value="0" selected>Short Stay</option>
-              <option value="1">Rent</option>
+            <label class="input-group-text" for="propertyType"> <i class="fa fa-clock fa-lg"></i></label>
+            <select class="form-select" id="propertyType">
+              <option value="" selected>Any</option>
+              <option value="short">Short Stay</option>
+              <option value="rent">Rent</option>
             </select>
           </div>
         </div>
         <div class="d-none d-md-block col-3">
           <div class="input-group">
             <span class="input-group-text">Price</span>
-            <input type="text" aria-label="First name" class="form-control" placeholder="Min">
-            <input type="text" aria-label="Last name" class="form-control" placeholder="Max">
+            <input type="text" aria-label="First name" id="minPrice" class="form-control" placeholder="Min">
+            <input type="text" aria-label="Last name" id="maxPrice" class="form-control" placeholder="Max">
           </div>
         </div>
         <div class="col-2 col-md-1">
@@ -169,7 +171,9 @@ https://templatemo.com/tm-591-villa-agency
               class="fa fa-list-dots"></i></button>
         </div>
         <div class="col-4 col-md-1 mt-2 mt-md-0">
-          <button class="btn btn-primary w-100 rounded rounded-pill"><i class="fa fa-magnifying-glass"></i></button>
+          <button id="saveFilterBtn" class="btn btn-primary w-100 rounded rounded-pill">
+            <i class="fa fa-magnifying-glass"></i>
+          </button>
         </div>
         <!-- <div class="col-4">
           <div class="input-group">
@@ -197,7 +201,7 @@ https://templatemo.com/tm-591-villa-agency
           </div>
         </div>
       </div> -->
-      <div class="row">
+      <div class="row" id="listings">
         <div class="col-lg-3 col-md-6">
           <div class="item">
             <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-danger"></i></div>
@@ -371,16 +375,17 @@ https://templatemo.com/tm-591-villa-agency
         </div> -->
       </div>
 
-      <div class="row">
+      <!-- PAGINATION-->
+      <!-- <div class="row">
         <div class="col-lg-12">
           <ul class="pagination">
-            <li><a href="#">1</a></li>
-            <li><a class="is_active" href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">>></a></li>
+            <li><a class="is_active" href="#" data-page="1">1</a></li>
+            <li><a href="#"data-page="2">2</a></li>
+            <li><a href="#"data-page="3">3</a></li>
+            <li><a href="#"data-page="99">>></a></li>
           </ul>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </div>
@@ -390,201 +395,215 @@ https://templatemo.com/tm-591-villa-agency
 
 
   <div class="modal fade" id="filtersModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog rona-modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Filters</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p style="font-size: 1.4em;" class="text-black my-3">Price Range ($)</p>
-          <div class="row ps-4">
-            <div class="col-5">
-              <div class="input-group">
-                <span class="input-group-text">Min</span>
-                <input type="text" aria-label="First name" class="form-control rona-form-control-lg" placeholder="Min">
+    <form id="filtersForm">
+
+
+      <div class="modal-dialog rona-modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Filters</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p style="font-size: 1.4em;" class="text-black my-3">Price Range ($)</p>
+            <div class="row ps-4">
+              <div class="col-5">
+                <div class="input-group">
+                  <span class="input-group-text">Min</span>
+                  <input type="text" aria-label="First name" class="form-control rona-form-control-lg" name="minPrice"
+                    placeholder="Min">
+                </div>
+              </div>
+              <div class="col-1 text-center py-2">
+                <span class="form-label h3">-</span>
+              </div>
+              <div class="col-5">
+                <div class="input-group">
+                  <span class="input-group-text">Max</span>
+                  <input type="text" aria-label="First name" class="form-control rona-form-control-lg" name="maxPrice"
+                    placeholder="Max">
+                </div>
               </div>
             </div>
-            <div class="col-1 text-center py-2">
-              <span class="form-label h3">-</span>
+            <hr>
+            <p style="font-size: 1.4em;" class="text-black my-3">
+              Beds & Bathrooms
+            </p>
+
+            <p class="text-black my-2">Bedrooms</p>
+            <div class="numbered-btns ps-4 text-center text-md-start">
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms" value="0" id="bedRoomAny" autocomplete="off"
+                  checked>
+                <label class="btn btn-outline-secondary rounded-pill px-0" for="bedRoomAny"> Any</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms" value="1" id="bedRoom1" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom1">1</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms" value="2" id="bedRoom2" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom2">2</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms" value="3" id="bedRoom3" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom3">3</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms" value="4" id="bedRoom4" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom4">4</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms" value="5" id="bedRoom5" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom5">5</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms" value="6" id="bedRoom6" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom6">6</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms" value="7" id="bedRoom7" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom7">7</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms" value="8" id="bedRoom8" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom8">8+</label>
+              </div>
             </div>
-            <div class="col-5">
-              <div class="input-group">
-                <span class="input-group-text">Max</span>
-                <input type="text" aria-label="First name" class="form-control rona-form-control-lg" placeholder="Min">
+
+
+            <!-- <p class="text-black my-2">Beds</p>
+            <div class="numbered-btns ps-4 text-center text-md-start">
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bedAny" autocomplete="off" checked>
+                <label class="btn btn-outline-secondary rounded-pill px-0" for="bedAny"> Any</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed1" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed1">1</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed2" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed2">2</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed3" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed3">3</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed4" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed4">4</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed5" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed5">5</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed6" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed6">6</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed7" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed7">7</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed8" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed8">8+</label>
+              </div>
+            </div> -->
+
+
+            <p class="text-black my-2">Washrooms</p>
+            <div class="numbered-btns ps-4  text-center text-md-start">
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms" value="0" id="bathAny" autocomplete="off"
+                  checked>
+                <label class="btn btn-outline-secondary rounded-pill px-0" for="bathAny"> Any</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms" value="1" id="bath1" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath1">1</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms" value="2" id="bath2" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath2">2</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms" value="3" id="bath3" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath3">3</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms" value="4" id="bath4" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath4">4</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms" value="5" id="bath5" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath5">5</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms" value="6" id="bath6" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath6">6</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms" value="7" id="bath7" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath7">7</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms" value="8" id="bath8" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath8">8+</label>
+              </div>
+            </div>
+
+            <hr>
+            <p style="font-size: 1.4em;" class="text-black my-3">Reservation Type</p>
+            <div class="row">
+              <div class="col-3 col-md-4 text-center">
+                <input type="radio" class="btn-check" name="propType" value="" id="resAny" autocomplete="off" checked>
+                <label class="btn rona-btn-lg btn-outline-secondary" for="resAny"> Any</label>
+              </div>
+
+              <div class="col-5 col-md-4 text-center">
+                <input type="radio" class="btn-check" name="propType" value="short" id="resShort" autocomplete="off">
+                <label class="btn rona-btn-lg btn-outline-secondary" for="resShort">
+                  <i class="fa fa-building"></i> Short Stay
+                </label>
+              </div>
+
+              <div class="col-4 text-center">
+                <input type="radio" class="btn-check" name="propType" value="rent" id="resRent" autocomplete="off">
+                <label class="btn rona-btn-lg btn-outline-secondary" for="resRent"> <i class="fa fa-home"></i>
+                  Rent</label>
+              </div>
+
+            </div>
+            <hr>
+            <p style="font-size: 1.4em;" class="text-black my-3">Amenities</p>
+            <div class="row ps-md-4 ps-2">
+              <div class="col-3 col-md-3 my-1">
+                <input type="checkbox" class="btn-check" name="amenities[]" value="kitchen" id="amenKitchen"
+                  autocomplete="off">
+                <label class="btn btn-outline-secondary" for="amenKitchen">Kitchen</label><br>
+              </div>
+              <div class="col-9 col-md-5 my-1">
+                <input type="checkbox" class="btn-check" name="amenities[]" value="Private Attached Bathroom"
+                  id="amenMasterBath" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="amenMasterBath">Private Attached Bathroom</label><br>
+              </div>
+              <div class="col-6 col-md-3 my-1">
+                <input type="checkbox" class="btn-check" name="amenities[]" value="Air Conditioner" id="amenAC"
+                  autocomplete="off">
+                <label class="btn btn-outline-secondary" for="amenAC">Air Conditioning</label><br>
               </div>
             </div>
           </div>
-          <hr>
-          <p style="font-size: 1.4em;" class="text-black my-3">
-            Beds & Bathrooms
-          </p>
-
-          <p class="text-black my-2">Bedrooms</p>
-          <div class="numbered-btns ps-4 text-center text-md-start">
-            <div>
-              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoomAny" autocomplete="off" checked>
-              <label class="btn btn-outline-secondary rounded-pill px-0" for="bedRoomAny"> Any</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom1" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom1">1</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom2" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom2">2</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom3" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom3">3</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom4" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom4">4</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom5" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom5">5</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom6" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom6">6</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom7" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom7">7</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBedrooms" id="bedRoom8" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bedRoom8">8+</label>
-            </div>
+          <div class="modal-footer justify-content-between">
+            <button type="reset" class="text-decoration-underline btn btn-outline-dark">Clear
+              All</button>
+            <button type="button" id="saveFilterFormBtn" class="btn btn-dark">Save</button>
           </div>
-
-
-          <p class="text-black my-2">Beds</p>
-          <div class="numbered-btns ps-4 text-center text-md-start">
-            <div>
-              <input type="radio" class="btn-check" name="nBeds" id="bedAny" autocomplete="off" checked>
-              <label class="btn btn-outline-secondary rounded-pill px-0" for="bedAny"> Any</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBeds" id="bed1" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bed1">1</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBeds" id="bed2" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bed2">2</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBeds" id="bed3" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bed3">3</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBeds" id="bed4" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bed4">4</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBeds" id="bed5" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bed5">5</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBeds" id="bed6" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bed6">6</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBeds" id="bed7" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bed7">7</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBeds" id="bed8" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bed8">8+</label>
-            </div>
-          </div>
-
-
-          <p class="text-black my-2">Bathrooms</p>
-          <div class="numbered-btns ps-4  text-center text-md-start">
-            <div>
-              <input type="radio" class="btn-check" name="nBathrooms" id="bathAny" autocomplete="off" checked>
-              <label class="btn btn-outline-secondary rounded-pill px-0" for="bathAny"> Any</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBathrooms" id="bath1" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bath1">1</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBathrooms" id="bath2" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bath2">2</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBathrooms" id="bath3" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bath3">3</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBathrooms" id="bath4" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bath4">4</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBathrooms" id="bath5" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bath5">5</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBathrooms" id="bath6" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bath6">6</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBathrooms" id="bath7" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bath7">7</label>
-            </div>
-            <div>
-              <input type="radio" class="btn-check" name="nBathrooms" id="bath8" autocomplete="off">
-              <label class="btn btn-outline-secondary rounded-pill" for="bath8">8+</label>
-            </div>
-          </div>
-
-          <hr>
-          <p style="font-size: 1.4em;" class="text-black my-3">Reservation Type</p>
-          <div class="row">
-            <div class="col-3 col-md-4 text-center">
-              <input type="radio" class="btn-check" name="options-outlined" id="success-outlined3" autocomplete="off"
-                checked>
-              <label class="btn rona-btn-lg btn-outline-secondary" for="success-outlined3"> Any</label>
-            </div>
-            <div class="col-5 col-md-4 text-center">
-              <input type="radio" class="btn-check" name="options-outlined" id="success-outlined1" autocomplete="off">
-              <label class="btn rona-btn-lg btn-outline-secondary" for="success-outlined1"> <i
-                  class="fa fa-building"></i> Short Stay</label>
-            </div>
-            <div class="col-4 text-center">
-              <input type="radio" class="btn-check" name="options-outlined" id="success-outlined2" autocomplete="off">
-              <label class="btn rona-btn-lg btn-outline-secondary" for="success-outlined2"> <i class="fa fa-home"></i>
-                Rent</label>
-            </div>
-          </div>
-          <hr>
-          <p style="font-size: 1.4em;" class="text-black my-3">Amenities</p>
-          <div class="row ps-md-4 ps-2">
-            <div class="col-3 col-md-3 my-1">
-              <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
-              <label class="btn btn-outline-secondary" for="btn-check-outlined">Kitchen</label><br>
-            </div>
-            <div class="col-9 col-md-5 my-1">
-              <input type="checkbox" class="btn-check" id="btn-check-outlined2" autocomplete="off">
-              <label class="btn btn-outline-secondary" for="btn-check-outlined2">Private Attached Bathroom</label><br>
-            </div>
-            <div class="col-6 col-md-3 my-1">
-              <input type="checkbox" class="btn-check" id="btn-check-outlined3" autocomplete="off">
-              <label class="btn btn-outline-secondary" for="btn-check-outlined3">Air Conditioning</label><br>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer justify-content-between">
-          <button type="button" class="text-decoration-underline btn btn-outline-dark" data-bs-dismiss="modal">Clear
-            All</button>
-          <button type="button" class="btn btn-dark">Save</button>
         </div>
       </div>
-    </div>
+    </form>
   </div>
 
 
@@ -623,5 +642,6 @@ https://templatemo.com/tm-591-villa-agency
   <script src="public/js/counter.js"></script>
   <script src="public/js/custom.js"></script>
 
-  </body>
+</body>
+
 </html>
