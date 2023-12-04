@@ -49,6 +49,9 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.rp-w-75{
+    width: 75%!important;
+}
 .rp-header {
     margin-top: -60px;
 }
@@ -118,7 +121,7 @@ body {
 
 .bg-image {
     /* The image used */
-    background-image: url("/public/img/banner-04.jpg") !important;
+    background-image: url("../img/banner-04.jpg") !important;
 
     /* Add the blur effect */
     filter: blur(50px);
@@ -198,6 +201,9 @@ body {
 }
 
 @media (max-width: 576px) {
+    .rp-w-75{
+        width: 95%!important;
+    }
     .rp-index-footer footer {
         margin-top: 600px;
     }
