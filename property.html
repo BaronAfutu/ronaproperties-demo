@@ -26,8 +26,7 @@
 
 </head>
 
-<body>
-
+<body class="position-relative">
     <nav class="navbar navbar-expand-lg navbar-dark z-1 rp-dark-transparent">
         <div class="container-fluid position-relative">
             <img src="public/img/favicon.ico" class="img-fluid position-absolute top-0 z-1" alt="">
@@ -60,413 +59,254 @@
         </div>
     </nav>
 
-    <header class="container-fluid p-0 rp-header">
-        <div class="position-relative h-100">
-            <img class="img-fluid" src="public/img/banner-01.jpg">
-            <div class="position-absolute w-100 rp-header-top text-center">
-                <div class="w-75 mx-auto">
+    <div class="bg-image"></div>
 
-                    <div class="text-white title">BE OUR GUEST</div>
-                    <div class="text-secondary bg-white px-1 px-sm-4 py-2 rounded sub-title">
-                        LIVE LIKE ROYALTY IN OUR BEST HOUSES
-                    </div>
-                    <div class="mt-5 py-5 w-100 d-none d-md-block">
-                        <div class="row bg-white g-0 py-1 rounded rp-shadow">
-                            <div class="col-3 border-end">
-                                <select name="city" id="city" class="form-select border-0">
-                                    <option value="" selected>City</option>
-                                    <option value="accra">Accra</option>
-                                    <option value="kumasi">Kumasi</option>
-                                    <option value="cape_coast">Cape Coast</option>
-                                </select>
-                            </div>
-                            <div class="col-3 border-end">
-                                <select name="noGuests" id="noGuests" class="form-select border-0">
-                                    <option value="1">1 Guest</option>
-                                    <option value="2" selected>2 Guests</option>
-                                    <option value="3">3 Guests</option>
-                                    <option value="4">4 Guests</option>
-                                    <option value="5">5+ Guests</option>
-                                </select>
-                            </div>
-                            <div class="col-3 border-end">
-                                <select name="stayType" id="stayType" class="form-select border-0">
-                                    <option value="short" selected>Short Stay</option>
-                                    <option value="long">Rent</option>
-                                </select>
-                            </div>
-                            <div class="col-3">
-                                <button class="btn rp-bg-primary w-75">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </div>
-                        </div>
+    <div class="mt-3 pt-3 mt-md-5 pt-md-5 overlay-background">
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-
-
-    <div class="container mt-5 pt-0 pt-md-5">
-        <div class="h3 text-center">Top Properties</div>
-        <div class="text-center w-75 mx-auto  my-4">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, enim sunt! Nam fugiat a reiciendis, ad
-            unde quod quia ea natus id distinctio laborum, optio atque asperiores accusantium molestiae est!
-        </div>
-        <div class="row my-4 py-4 justify-content-center">
-            <div class="col-8 col-md-4 col-xl-3 my-2 my-md-0">
-                <div class="card shadow mx-auto product-card">
-                    <div class="position-relative">
-                        <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
-                        <div class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
-                            <small class="fw-bold">$20 / daily</small>
-                        </div>
-                        <div class="position-absolute top-0 end-0 z-1 m-2">
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-text">
-                            <small><b>Accra</b> &#x2022; Newtown</small>
-                            <div>
-                                Listing Title
-                            </div>
-                            <div class="row g-0">
-                                <div class="col-6">
-                                    <i class="fa fa-users"></i> <b>8</b> Guests
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-bed"></i> <b>8</b> Bedrooms
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-bath"></i> <b>8</b> Bathrooms
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- DUPLICATES -->
-            <div class="col-8 col-md-4 col-xl-3 my-2 my-md-0">
-                <div class="card shadow mx-auto product-card">
-                    <div class="position-relative">
-                        <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
-                        <div class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
-                            <small class="fw-bold">$20 / daily</small>
-                        </div>
-                        <div class="position-absolute top-0 end-0 z-1 m-2">
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-text">
-                            <small><b>Accra</b> &#x2022; Newtown</small>
-                            <div>
-                                Listing Title
-                            </div>
-                            <div class="row g-0">
-                                <div class="col-6">
-                                    <i class="fa fa-users"></i> <b>8</b> Guests
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-bed"></i> <b>8</b> Bedrooms
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-bath"></i> <b>8</b> Bathrooms
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-8 col-md-4 col-xl-3 my-2 my-md-0">
-                <div class="card shadow mx-auto product-card">
-                    <div class="position-relative">
-                        <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
-                        <div class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
-                            <small class="fw-bold">$20 / daily</small>
-                        </div>
-                        <div class="position-absolute top-0 end-0 z-1 m-2">
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-text">
-                            <small><b>Accra</b> &#x2022; Newtown</small>
-                            <div>
-                                Listing Title
-                            </div>
-                            <div class="row g-0">
-                                <div class="col-6">
-                                    <i class="fa fa-users"></i> <b>8</b> Guests
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-bed"></i> <b>8</b> Bedrooms
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-bath"></i> <b>8</b> Bathrooms
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- END OF DUPLICATES -->
-        </div>
-    </div>
-
-
-    <div class="container-fluid my-5 py-5 rp-bg-secondary">
         <div class="container">
-            <div class="h3 text-center">About us</div>
-            <div class="row my-5 justify-content-between justify-content-xl-center">
-                <div class="col-12 col-md-5 col-xl-4 align-self-center order-md-1">
-                    <div class="px-5 px-sm-0 px-xl-5 mx-auto">
-                        <img src="public/img/aboutus.jpg" class="img-fluid w-100 rounded" alt="">
+            <div class="row rp-text-dark">
+                <div class="col-9 col-md-6 h1">
+                    Listing Title 1
+                </div>
+                <div class="col-3 col-md-6 text-start text-md-end pt-2 pt-md-3">
+                    <span class="d-none d-md-inline">SAVE</span><i
+                        class="fa-regular fa-heart fa-lg pe-4 ps-md-1 pe-md-4"></i>
+                    <span class="d-none d-md-inline">SHARE</span><i
+                        class="fa-regular fa-share-from-square fa-lg px-0 ps-md-1 pe-md-4"></i>
+                </div>
+            </div>
+
+
+            <div class="row mt-2 mb-5">
+                <div class="col-12 col-md-6">
+                    <img src="public/img/banner.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="row mt-1 mt-md-0 g-1 px-1">
+                        <div class="col-3 col-md-6">
+                            <img src="public/img/banner.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-3 col-md-6">
+                            <img src="public/img/banner.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-3 col-md-6">
+                            <img src="public/img/banner.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-3 col-md-6">
+                            <img src="public/img/banner.jpg" class="img-fluid" alt="">
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-7 col-xl-5 py-xl-4 order-md-0">
-                    <p>
-                        Curabitur efficitur ante vel mi bibendum, et maximus nisl ultricies. Morbi nec tempus dui, sit
-                        amet
-                        facilisis nisl.
-                    </p>
-                    <p>
-                        Ut vel urna quis urna tristique tempus. Etiam lobortis est at mauris eleifend, id tempor purus
-                        ultricies.
-                    </p>
-                    <p>
-                        Curabitur efficitur luctus enim nec sollicitudin. Fusce venenatis venenatis lorem eu accumsan.
-                        Nunc
-                        sit amet mi vitae odio porttitor feugiat. Sed quis sem elementum, viverra ligula at, lobortis
-                        magna.
-                        Praesent congue nibh in dolor rutrum, et euismod quam elementum.
-                    </p>
-                    <p>
-                        Mauris justo felis, iaculis quis sagittis sit amet, feugiat vitae est. Aliquam porta ex elit,
-                        sit
-                        amet rutrum turpis egestas viverra. Quisque at libero purus.
+            </div>
+
+            <div class="row my-5">
+                <div class="col-12 col-md-7">
+                    <div class="h2 fw-bold rp-text-dark">Accra</div>
+                    <small>8 Guests / 8 Bedrroms / 3 Bathrooms / 280 m<sup>2</sup></small>
+                    <p class="my-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim impedit itaque iste
+                        harum, numquam obcaecati praesentium soluta eius corrupti. Ipsa accusamus at veniam numquam
+                        omnis voluptas ullam qui perferendis inventore. <br><br>
+                        <a href="https://www.google.com/maps/search/5.595087,+-0.139712?entry=tts" target="_blank"
+                            class="text-dark" rel="noopener noreferrer">
+                            Location <i class="fa fa-arrow-up-right-from-square"></i>
+                        </a>
                     </p>
 
-                    <p class="rp-bg-light p-2 text-center rounded">
-                        We strive to offer you best possible homes to stay.
-                    </p>
+
+                    <div class="h3 rp-text-dark">Amenities</div>
+                    <div class="row">
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-person-swimming"></i>
+                            Swimming Pool
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa-solid fa-gamepad"></i>
+                            Gaming Console
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa-solid fa-wind"></i>
+                            Air Conditioning
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa-solid fa-dumbbell"></i>
+                            Gym
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-bathtub"></i>
+                            Bath Tub
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-wifi"></i>
+                            WiFi
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-satellite-dish"></i>
+                            Satelite TV
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-table-tennis"></i>
+                            Table Tennis
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-person-breastfeeding"></i>
+                            Baby Cot
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-couch"></i>
+                            Living Room
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-kitchen-set"></i>
+                            Private Kitchen
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-car"></i>
+                            Parking
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-shirt"></i>
+                            Washing Machine
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-child-reaching"></i>
+                            Playground
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-utensils"></i>
+                            Dining Table
+                        </div>
+                    </div>
+
+                    <div class="h3 mt-3 rp-text-dark">Nearby</div>
+                    <div class="row">
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-plane-departure"></i>
+                            Airport
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-umbrella-beach"></i>
+                            Beach
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-city"></i>
+                            City
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-utensils"></i>
+                            Restaurant
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-hospital"></i>
+                            Hospital
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <i class="fa fa-cart-shopping"></i>
+                            Market / Mall
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-5 pt-5 pt-md-0 px-3">
+
+                    <div class="card my-2 py-3 rp-shadow rp-bg-secondary sticky-top">
+                        <div class="card-body text-black">
+                            <div class="h3 mb-3">
+                                $40.00 / day
+                            </div>
+
+                            <div class="rounded border px-3">
+                                <div class="row py-0" style="cursor: pointer;" id="reportrange">
+                                    <div class="col-6 py-2 border-end small">
+                                        CHECK-IN <br>
+                                        <div class="d-inline text-muted small" id="checkin">
+                                            ADD DATE
+                                        </div>
+                                    </div>
+                                    <div class="col-6 py-2 border-start small">
+                                        CHECKOUT <br>
+                                        <div class="d-inline text-muted small" id="checkout">
+                                            ADD DATE
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row border-top justify-content-between">
+                                    <div class="col-12">
+                                        <label for="inp" class="inp">
+                                            <input type="number" id="nGuests" placeholder="&nbsp;"
+                                                class="bg-transparent" name="nGuests" value="1" min="1">
+                                            <span class="label">Guests</span>
+                                            <span class="focus-bg"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="btn rp-bg-dark text-center w-100">Check Availability</button>
+                            </div>
+                            <div class="mt4">
+                                <input type="hidden" id="listingID" value="<%= listing.id %>">
+                                <input type="date" id="checkinDate" hidden>
+                                <input type="date" id="checkoutate" hidden>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-12 mb-3 text-center">
+                                    You will receive someting
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <input type="hidden" id="rate" value="<%= listing.rate %>">
+                                <div id="periodCost" class="col-6 text-start text-decoration-underline">
+                                    price
+                                </div>
+
+                                <div id="cost" class="col-6 text-end">
+                                    rate
+                                </div>
+                            </div>
+
+                            <div class="row my-2">
+                                <input type="hidden" id="fee" value="<%= 30.00 %>">
+                                <div class="col-6 text-start text-decoration-underline">
+                                    Service Fee
+                                </div>
+                                <div class="col-6 text-end">
+                                    $ 30.00
+                                </div>
+                            </div>
+                            <hr class="my-3">
+                            <div class="row">
+                                <div class="col-6 text-start fw-bold">
+                                    Total Before Taxes
+                                </div>
+                                <div class="col-6 text-end">
+                                    $ 30.00
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
+
+        <!-- <div class="container-fluid rp-bg-dark">
+            <div class="container py-5">
+                <div class="h3">Location</div>
+
+            </div>
+        </div> -->
     </div>
 
-    <div class="container mt-md-5 pt-0 pt-md-5">
-        <div class="h3 text-center">Properties</div>
-
-        <!-- FILTERS -->
-        <div class="row g-1 justify-content-center sticky-top py-2 rounded shadow bg-light">
-
-            <div class="col-4 col-md-2">
-                <div class="input-group">
-                    <label class="input-group-text" for="bedrooms">
-                        <i class="fa fa-bed fa-lg rp-text-dark"></i>
-                    </label>
-                    <select class="form-select" id="bedrooms">
-                        <option value="0" selected>Any</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8+</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-4 col-md-2">
-                <div class="input-group">
-                    <label class="input-group-text" for="noGuests">
-                        <i class="fa fa-users fa-lg rp-text-dark"></i>
-                    </label>
-                    <select class="form-select" id="noGuests">
-                        <option value="0" selected>Any</option>
-                        <option value="1">1 </option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8+</option>
-                    </select>
-                </div>
-            </div>
-            <div class="d-none d-md-block col-2">
-                <div class="input-group">
-                    <label class="input-group-text" for="propertyType">
-                        <i class="fa fa-clock fa-lg rp-text-dark"></i></label>
-                    <select class="form-select" id="propertyType">
-                        <option value="" selected>Any</option>
-                        <option value="short">Short Stay</option>
-                        <option value="rent">Rent</option>
-                    </select>
-                </div>
-            </div>
-            <div class="d-none d-md-block col-3">
-                <div class="input-group">
-                    <span class="input-group-text">Price($)</span>
-                    <input type="text" value="0" aria-label="First name" class="form-control" placeholder="Min"
-                        id="minPrice">
-                    <input type="text" value="9999" aria-label="Last name" class="form-control" placeholder="Max"
-                        id="maxPrice">
-                </div>
-            </div>
-            <div class="col-2 col-md-1 text-center">
-                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#filtersModal"><i
-                        class="fa fa-list-dots"></i></button>
-            </div>
-            <div class="col-2 col-md-1 mt-md-0">
-                <button class="btn rp-bg-dark shadow-sm rp px-2 px-md-3 rounded-pill" id="saveFilterBtn">Filter</button>
-            </div>
-            <!-- <div class="col-4">
-              <div class="input-group">
-                <select class="features form-select form-control" name="features[]" multiple="multiple">
-                  <option value="AL">Private Bathroom</option>
-                  <option value="WY">AC</option>
-                  <option value="WY">Kitchen</option>
-                </select>
-              </div>
-            </div> -->
+    <!-- 
+        Copy coordinates and paste in the admin side
+        https://www.google.com/maps/search/5.595087,+-0.139712?entry=tts 
+    -->
 
 
-        </div>
-        <!-- FILTERS END -->
-        <div class="row my-4 py-4 justify-content-center">
-            <div class="col-8 col-md-4 col-xl-3 my-2 my-md-0">
-                <div class="card shadow mx-auto product-card">
-                    <div class="position-relative">
-                        <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
-                        <div class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
-                            <small class="fw-bold">$20 / daily</small>
-                        </div>
-                        <div class="position-absolute top-0 end-0 z-1 m-2">
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-text">
-                            <small><b>Accra</b> &#x2022; Newtown</small>
-                            <div>
-                                Listing Title
-                            </div>
-                            <div class="row g-0">
-                                <div class="col-6">
-                                    <i class="fa fa-users"></i> <b>8</b> Guests
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-bed"></i> <b>8</b> Bedrooms
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-bath"></i> <b>8</b> Bathrooms
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- DUPLICATES -->
-            <div class="col-8 col-md-4 col-xl-3 my-2 my-md-0">
-                <div class="card shadow mx-auto product-card">
-                    <div class="position-relative">
-                        <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
-                        <div class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
-                            <small class="fw-bold">$20 / daily</small>
-                        </div>
-                        <div class="position-absolute top-0 end-0 z-1 m-2">
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-text">
-                            <small><b>Accra</b> &#x2022; Newtown</small>
-                            <div>
-                                Listing Title
-                            </div>
-                            <div class="row g-0">
-                                <div class="col-6">
-                                    <i class="fa fa-users"></i> <b>8</b> Guests
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-bed"></i> <b>8</b> Bedrooms
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-bath"></i> <b>8</b> Bathrooms
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-8 col-md-4 col-xl-3 my-2 my-md-0">
-                <div class="card shadow mx-auto product-card">
-                    <div class="position-relative">
-                        <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
-                        <div class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
-                            <small class="fw-bold">$20 / daily</small>
-                        </div>
-                        <div class="position-absolute top-0 end-0 z-1 m-2">
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-text">
-                            <small><b>Accra</b> &#x2022; Newtown</small>
-                            <div>
-                                Listing Title
-                            </div>
-                            <div class="row g-0">
-                                <div class="col-6">
-                                    <i class="fa fa-users"></i> <b>8</b> Guests
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-bed"></i> <b>8</b> Bedrooms
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
-                                </div>
-                                <div class="col-6">
-                                    <i class="fa fa-bath"></i> <b>8</b> Bathrooms
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- END OF DUPLICATES -->
-        </div>
-        <div class="text-center">
-            <a class="btn btn-outline-dark rounded">
-                See More <i class="fa fa-chevron-right"></i>
-            </a>
-        </div>
-    </div>
 
 
 
@@ -816,8 +656,10 @@
                 <div class="row">
                     <div class="col-12 col-sm-6 text-start">
                         <ul class="list-inline">
-                            <li class="list-inline-item">Terms<span class="d-none d-md-inline"> and Conditions</span></li>
-                            <li class="list-inline-item">Privacy<span class="d-none d-xl-inline"> Notice and Cookies</span></li>
+                            <li class="list-inline-item">Terms<span class="d-none d-md-inline"> and Conditions</span>
+                            </li>
+                            <li class="list-inline-item">Privacy<span class="d-none d-xl-inline"> Notice and
+                                    Cookies</span></li>
                             <li class="list-inline-item">Contact</li>
                         </ul>
                     </div>

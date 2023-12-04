@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="public/img/favicon.ico">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"> -->
+  <title>Rona Properties</title>
+  <!-- Bootstrap core CSS -->
+  <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+  <!-- Additional CSS Files -->
+  <!-- <link rel="stylesheet" href="public/css/select2.min.css"> -->
+  <!-- <link rel="stylesheet" href="public/css/fontawesome.css"> -->
+  <!-- <link rel="stylesheet" href="public/css/templatemo-villa-agency.css"> -->
+  <!-- <link rel="stylesheet" href="public/css/owl.css"> -->
+  <!-- <link rel="stylesheet" href="public/css/animate.css"> -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" /> -->
+  <!--
+
+TemplateMo 591 villa agency
+
+https://templatemo.com/tm-591-villa-agency
+
+-->
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <!-- <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div> -->
+  <!-- ***** Preloader End ***** -->
+
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-8">
+          <ul class="info">
+            <li><i class="fa fa-envelope text-primary"></i> info@ronaproperties.com</li>
+            <li><i class="fa fa-map text-primary"></i> Accra Sunny Side Lane, SL 33160</li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <ul class="social-links">
+            <li><a href="#" class="rounded rounded-pill px-1">
+                <i class="fa fa-heart"></i> Favorites
+                <span class="badge rounded-pill bg-secondary">0</span>
+              </a></li>
+            <li><a href="#" class="rounded rounded-pill px-1">
+                <i class="fa fa-home"></i> Saved
+                <span class="badge rounded-pill bg-secondary">0</span>
+              </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo h3">
+              <img src="public/img/rona_logo.png"
+                style="height: 50px; width: 50px; object-fit: contain;display: inline;" alt="">
+              <span>Rona Properties</span>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav me-0 ms-auto">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="properties.html">Properties</a></li>
+              <li><a href="property-details.html">Property Details</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                  <i class="d-none d-md-inline-block fa fa-user"></i>
+                  Login
+                </a></li>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+      <!-- -------------------------------  -->
+    </div>
+    <div class="container-fluid filters bg-white p-3 shadow">
+      <div class="container">
+        <div class="row justify-content-center">
+
+          <div class="col-5 col-md-2">
+            <div class="input-group">
+              <label class="input-group-text" for="bedrooms">
+                <i class="fa fa-bed fa-lg"></i>
+              </label>
+              <select class="form-select" id="bedrooms">
+                <option value="0" selected>Any</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8+</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-5 col-md-2">
+            <div class="input-group">
+              <label class="input-group-text" for="bathrooms">
+                <i class="fa fa-shower fa-lg"></i>
+              </label>
+              <select class="form-select" id="bathrooms">
+                <option value="0" selected>Any</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8+</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-none d-md-block col-2">
+            <div class="input-group">
+              <label class="input-group-text" for="propertyType"> <i class="fa fa-clock fa-lg"></i></label>
+              <select class="form-select" id="propertyType">
+                <option value="" selected>Any</option>
+                <option value="short">Short Stay</option>
+                <option value="rent">Rent</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-none d-md-block col-3">
+            <div class="input-group">
+              <span class="input-group-text">Price($)</span>
+              <input type="text" value="0" aria-label="First name" class="form-control" placeholder="Min" id="minPrice">
+              <input type="text" value="9999" aria-label="Last name" class="form-control" placeholder="Max"
+                id="maxPrice">
+            </div>
+          </div>
+          <div class="col-2 col-md-1">
+            <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#filtersModal"><i
+                class="fa fa-list-dots"></i></button>
+          </div>
+          <div class="col-4 col-md-1 mt-2 mt-md-0">
+            <button class="btn btn-dark rounded rounded-pill" id="saveFilterBtn">Save</button>
+          </div>
+          <!-- <div class="col-4">
+            <div class="input-group">
+              <select class="features form-select form-control" name="features[]" multiple="multiple">
+                <option value="AL">Private Bathroom</option>
+                <option value="WY">AC</option>
+                <option value="WY">Kitchen</option>
+              </select>
+            </div>
+          </div> -->
+
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="fullscreen-banner">
+    <div class="container">
+      <form action="">
+        <div class="banner-text rounded p-2">
+          <div class="row d-none d-lg-flex">
+            <div class="col-12 col-xl-10 mb-2 mb-xl-0">
+              <div class="row rounded bg-light text-dark mx-auto h-100 py-2">
+                <div class="col-6 text-start text-md-center col-md-2 py-0 border-end">
+                  Search by:
+                </div>
+                <div class="col-6 col-md-3 border-end">
+                  <select name="searchBy" id="searchBy" class="form-control form-select border-0 bg-light py-0">
+                    <option value="a">All</option>
+                    <option value="c">Cities</option>
+                    <option value="add">Address</option>
+                    <option value="t">Tour Sites</option>
+                    <!-- <option value="r">Rooms</option>
+                    <option value="b">Bathrooms</option> -->
+                  </select>
+                </div>
+                <div class="col-12 col-md-6 my-2 my-md-0">
+                  <input type="text" class="form-control border-0 bg-light py-0 text-center text-md-start"
+                    placeholder="|Type here...">
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-2">
+              <button class="btn btn-primary">Find Your Place</button>
+            </div>
+          </div>
+          <a href="properties.html" class="btn btn-primary rounded-pill d-inline d-lg-none"><i
+              class="fa fa-magnifying-glass fa-lg"></i> Find Your Place</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="quick-links my-5">
+    <div class="container-fluid py-5 bg-light">
+      <div class="row justify-content-center">
+        <div class="col-4 col-lg-3 text-center">
+          <a href="properties.html" class="text-dark">
+            <img src="public/img/gallery_view.jpg" class="img-fluid rounded rounded-circle" alt=""><br>
+            <span class="topic">Gallery view</span><br>
+            <span class="small">See All Listings</span>
+          </a>
+        </div>
+        <div class="col-4 col-lg-3 text-center">
+          <a href="#" class="text-dark">
+            <img src="public/img/map.png" class="img-fluid rounded rounded-circle" alt=""><br>
+            <span class="topic">Map view</span><br>
+            <span class="small">Google Map</span>
+          </a>
+        </div>
+        <div class="col-4 col-lg-3 text-center">
+          <a href="contact.html" class="text-dark">
+            <img src="public/img/agent.jpg" class="img-fluid rounded rounded-circle" alt=""><br>
+            <span class="topic">Reach <span class="d-none d-lg-inline">an</span> Agent</span><br>
+            <span class="small"><span class="d-none d-lg-inline">Have a </span>Question?</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="properties rona-min-h-100">
+    <div class="container-fluid px-5">
+
+      <input type="hidden" value="3" id="token" hidden>
+
+      <!-- <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+          <div class="section-heading text-center">
+            <h6>| Properties</h6>
+            <h2>We Provide The Best Property You Like</h2>
+          </div>
+        </div>
+      </div> -->
+      <div class="row" id="listings">
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-danger"></i></div>
+            <a href="property-details.html"><img src="public/img/property-01.jpg" alt=""></a>
+            <span class="category">Luxury Villa</span>
+            <h6>$30.00</h6>
+            <h4><a href="property-details.html">18 New Street Miami, OR 97219</a></h4>
+            <ul>
+              <li>Bedrooms: <span>8</span></li>
+              <li>Bathrooms: <span>8</span></li>
+              <li>Area: <span>545m2</span></li>
+              <li>Floor: <span>3</span></li>
+              <li>Parking: <span>6 spots</span></li>
+            </ul>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-02.jpg" alt=""></a>
+            <span class="category">Luxury Villa</span>
+            <h6>$1.180.000</h6>
+            <h4><a href="property-details.html">54 Mid Street Florida, OR 27001</a></h4>
+            <ul>
+              <li>Bedrooms: <span>6</span></li>
+              <li>Bathrooms: <span>5</span></li>
+              <li>Area: <span>450m2</span></li>
+              <li>Floor: <span>3</span></li>
+              <li>Parking: <span>8 spots</span></li>
+            </ul>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-03.jpg" alt=""></a>
+            <span class="category">Luxury Villa</span>
+            <h6>$1.460.000</h6>
+            <h4><a href="property-details.html">26 Old Street Miami, OR 38540</a></h4>
+            <ul>
+              <li>Bedrooms: <span>5</span></li>
+              <li>Bathrooms: <span>4</span></li>
+              <li>Area: <span>225m2</span></li>
+              <li>Floor: <span>3</span></li>
+              <li>Parking: <span>10 spots</span></li>
+            </ul>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-04.jpg" alt=""></a>
+            <span class="category">Apartment</span>
+            <h6>$584.500</h6>
+            <h4><a href="property-details.html">12 New Street Miami, OR 12650</a></h4>
+            <ul>
+              <li>Bedrooms: <span>4</span></li>
+              <li>Bathrooms: <span>3</span></li>
+              <li>Area: <span>125m2</span></li>
+              <li>Floor: <span>25th</span></li>
+              <li>Parking: <span>2 cars</span></li>
+            </ul>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-05.jpg" alt=""></a>
+            <span class="category">Penthouse</span>
+            <h6>$925.600</h6>
+            <h4><a href="property-details.html">34 Beach Street Miami, OR 42680</a></h4>
+            <ul>
+              <li>Bedrooms: <span>4</span></li>
+              <li>Bathrooms: <span>4</span></li>
+              <li>Area: <span>180m2</span></li>
+              <li>Floor: <span>38th</span></li>
+              <li>Parking: <span>2 cars</span></li>
+            </ul>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-06.jpg" alt=""></a>
+            <span class="category">Modern Condo</span>
+            <h6>$450.000</h6>
+            <h4><a href="property-details.html">22 New Street Portland, OR 16540</a></h4>
+            <ul>
+              <li>Bedrooms: <span>3</span></li>
+              <li>Bathrooms: <span>2</span></li>
+              <li>Area: <span>165m2</span></li>
+              <li>Floor: <span>26th</span></li>
+              <li>Parking: <span>3 cars</span></li>
+            </ul>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-04.jpg" alt=""></a>
+            <span class="category">Apartment</span>
+            <h6>$584.500</h6>
+            <h4><a href="property-details.html">12 New Street Miami, OR 12650</a></h4>
+            <ul>
+              <li>Bedrooms: <span>4</span></li>
+              <li>Bathrooms: <span>3</span></li>
+              <li>Area: <span>125m2</span></li>
+              <li>Floor: <span>25th</span></li>
+              <li>Parking: <span>2 cars</span></li>
+            </ul>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-05.jpg" alt=""></a>
+            <span class="category">Penthouse</span>
+            <h6>$925.600</h6>
+            <h4><a href="property-details.html">34 Beach Street Miami, OR 42680</a></h4>
+            <ul>
+              <li>Bedrooms: <span>4</span></li>
+              <li>Bathrooms: <span>4</span></li>
+              <li>Area: <span>180m2</span></li>
+              <li>Floor: <span>38th</span></li>
+              <li>Parking: <span>2 cars</span></li>
+            </ul>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> -->
+          </div>
+        </div>
+        <!-- <div class="col-lg-3 col-md-6">
+          <div class="item">
+            <div class="position-absolute end-0 p-2"><i class="fa fa-heart fa-xl text-secondary"></i></div>
+            <a href="property-details.html"><img src="public/img/property-06.jpg" alt=""></a>
+            <span class="category">Modern Condo</span>
+            <h6>$450.000</h6>
+            <h4><a href="property-details.html">22 New Street Portland, OR 16540</a></h4>
+            <ul>
+              <li>Bedrooms: <span>3</span></li>
+              <li>Bathrooms: <span>2</span></li>
+              <li>Area: <span>165m2</span></li>
+              <li>Floor: <span>26th</span></li>
+              <li>Parking: <span>3 cars</span></li>
+            </ul>
+            <!-- <div class="main-button">
+              <a href="property-details.html">Reserve</a>
+            </div> ->
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-center">
+    <a href="properties.html" class="btn btn-primary btn-lg rounded-pill">See More Listing</a>
+  </div>
+
+
+
+
+
+
+
+  <div class="modal fade" id="filtersModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form id="filtersForm">
+
+
+      <div class="modal-dialog rona-modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Filters</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p style="font-size: 1.4em;" class="text-black my-3">Price Range ($)</p>
+            <div class="row ps-4">
+              <div class="col-5">
+                <div class="input-group">
+                  <span class="input-group-text">Min</span>
+                  <input type="text" aria-label="First name" class="form-control rona-form-control-lg"
+                    name="minPrice" placeholder="Min">
+                </div>
+              </div>
+              <div class="col-1 text-center py-2">
+                <span class="form-label h3">-</span>
+              </div>
+              <div class="col-5">
+                <div class="input-group">
+                  <span class="input-group-text">Max</span>
+                  <input type="text" aria-label="First name" class="form-control rona-form-control-lg"
+                    name="maxPrice" placeholder="Max">
+                </div>
+              </div>
+            </div>
+            <hr>
+            <p style="font-size: 1.4em;" class="text-black my-3">
+              Beds & Bathrooms
+            </p>
+
+            <p class="text-black my-2">Bedrooms</p>
+            <div class="numbered-btns ps-4 text-center text-md-start">
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms" 
+                value="0" id="bedRoomAny" autocomplete="off" checked>
+                <label class="btn btn-outline-secondary rounded-pill px-0" for="bedRoomAny"> Any</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms"
+                value="1" id="bedRoom1" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom1">1</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms"
+                value="2" id="bedRoom2" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom2">2</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms"
+                value="3" id="bedRoom3" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom3">3</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms"
+                value="4" id="bedRoom4" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom4">4</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms"
+                value="5" id="bedRoom5" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom5">5</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms"
+                value="6" id="bedRoom6" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom6">6</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms"
+                value="7" id="bedRoom7" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom7">7</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBedrooms"
+                value="8" id="bedRoom8" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bedRoom8">8+</label>
+              </div>
+            </div>
+
+
+            <!-- <p class="text-black my-2">Beds</p>
+            <div class="numbered-btns ps-4 text-center text-md-start">
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bedAny" autocomplete="off" checked>
+                <label class="btn btn-outline-secondary rounded-pill px-0" for="bedAny"> Any</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed1" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed1">1</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed2" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed2">2</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed3" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed3">3</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed4" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed4">4</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed5" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed5">5</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed6" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed6">6</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed7" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed7">7</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBeds" id="bed8" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bed8">8+</label>
+              </div>
+            </div> -->
+
+
+            <p class="text-black my-2">Washrooms</p>
+            <div class="numbered-btns ps-4  text-center text-md-start">
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms"
+                value="0" id="bathAny" autocomplete="off" checked>
+                <label class="btn btn-outline-secondary rounded-pill px-0" for="bathAny"> Any</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms"
+                value="1" id="bath1" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath1">1</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms"
+                value="2" id="bath2" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath2">2</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms"
+                value="3" id="bath3" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath3">3</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms"
+                value="4" id="bath4" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath4">4</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms"
+                value="5" id="bath5" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath5">5</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms"
+                value="6" id="bath6" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath6">6</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms"
+                value="7" id="bath7" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath7">7</label>
+              </div>
+              <div>
+                <input type="radio" class="btn-check" name="nBathrooms"
+                value="8" id="bath8" autocomplete="off">
+                <label class="btn btn-outline-secondary rounded-pill" for="bath8">8+</label>
+              </div>
+            </div>
+
+            <hr>
+            <p style="font-size: 1.4em;" class="text-black my-3">Reservation Type</p>
+            <div class="row">
+              <div class="col-3 col-md-4 text-center">
+                <input type="radio" class="btn-check" name="propType"
+                value="" id="resAny" autocomplete="off" checked>
+                <label class="btn rona-btn-lg btn-outline-secondary" for="resAny"> Any</label>
+              </div>
+              
+              <div class="col-5 col-md-4 text-center">
+                <input type="radio" class="btn-check" name="propType"
+                value="short" id="resShort" autocomplete="off">
+                <label class="btn rona-btn-lg btn-outline-secondary" for="resShort"> 
+                  <i class="fa fa-building"></i> Short Stay
+                </label>
+              </div>
+              
+              <div class="col-4 text-center">
+                <input type="radio" class="btn-check" name="propType"
+                value="rent" id="resRent" autocomplete="off">
+                <label class="btn rona-btn-lg btn-outline-secondary" for="resRent"> <i class="fa fa-home"></i>
+                  Rent</label>
+              </div>
+            
+            </div>
+            <hr>
+            <p style="font-size: 1.4em;" class="text-black my-3">Amenities</p>
+            <div class="row ps-md-4 ps-2">
+              <div class="col-3 col-md-3 my-1">
+                <input type="checkbox" class="btn-check" name="amenities[]"
+                value="kitchen" id="amenKitchen" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="amenKitchen">Kitchen</label><br>
+              </div>
+              <div class="col-9 col-md-5 my-1">
+                <input type="checkbox" class="btn-check" name="amenities[]"
+                value="Private Attached Bathroom" id="amenMasterBath" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="amenMasterBath">Private Attached Bathroom</label><br>
+              </div>
+              <div class="col-6 col-md-3 my-1">
+                <input type="checkbox" class="btn-check" name="amenities[]"
+                value="Air Conditioner" id="amenAC" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="amenAC">Air Conditioning</label><br>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-between">
+            <button type="reset" class="text-decoration-underline btn btn-outline-dark" >Clear
+              All</button>
+            <button type="button" id="saveFilterFormBtn" class="btn btn-dark">Save</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog rona-modal login-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="loginModalLabel">
+            Login or Signup
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="lead">Welcome to Rona Properties</p>
+
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">Country/Region</label>
+            <select class="form-select" id="inputGroupSelect01">
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text">Number</span>
+            <span class="input-group-text">+233</span>
+            <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+          </div>
+          <p>
+            *Disclaimer
+          </p>
+          <div class="w-100">
+            <button class="btn btn-primary w-100 text-center">Continue</button>
+          </div>
+          <hr>
+          <div class="w-100">
+            <button class="w-100 btn btn-outline-secondary text-dark">
+              <i class="fab fa-facebook-square text-primary fa-lg"></i> Continue with Facebook
+            </button>
+          </div>
+          <div class="w-100">
+            <button class="w-100 btn btn-outline-secondary text-dark">
+              <i class="fab fa-google text-primary fa-lg"></i> Continue with Google
+            </button>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <div class="container px-5">
+      <div class="row pt-4 text-white">
+        <div class="col-8">
+          &copy; 2023 Rona Properties
+        </div>
+        <div class="col-4 text-end">
+          <i class="fab fa-facebook-square fa-xl"></i>
+          <i class="fab fa-twitter-square fa-xl"></i>
+          <i class="fab fa-instagram-square fa-xl"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="public/vendor/jquery/jquery.min.js"></script>
+  <script src="public/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="public/js/select2.min.js"></script>
+  <script src="public/js/isotope.min.js"></script>
+  <script src="public/js/owl-carousel.js"></script>
+  <script src="public/js/counter.js"></script>
+  <script src="public/js/custom.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+:root {
+    /* --light: #D5C5E5; */
+    --light: #ECE6F2;
+    --primary: #7121C2;
+    --secondary: #4B3B5C;
+    --dark: #0E031A;
+}
+
+body {
+    background: var(--light);
+    /* font-family: Arial, Helvetica, sans-serif */
+}
+
+.rp-bg-secondary {
+    background: var(--secondary);
+    color: var(--light);
+    /* color: white; */
+}
+
+.rp-bg-primary {
+    background: var(--primary) !important;
+    color: var(--light) !important;
+}
+
+.rp-bg-light {
+    background: var(--light) !important;
+    color: var(--secondary) !important;
+}
+
+.rp-bg-dark {
+    background: var(--dark) !important;
+    color: white !important;
+}
+
+.rp-text-primary {
+    color: var(--primary);
+}
+
+.rp-text-dark {
+    color: var(--dark);
+}
+
+.rp-text-light {
+    color: var(--light);
+}
+
+
+.rp-dark-transparent {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.rp-header {
+    margin-top: -60px;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.sub-title {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.7rem;
+}
+
+.rp-shadow {
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(var(--bs-body-color-rgb), .8) !important
+}
+
+.rp-product-card-image {
+    border-radius: 0.35rem 0.35rem 30px 0px;
+}
+
+.rp-product-card-tag {
+    border-radius: 5px 5px 15px 5px;
+    box-shadow: 2px 2px rgba(var(--bs-body-color-rgb), 0.8) !important;
+}
+
+.rp-contact-us table td {
+    padding-top: 10px;
+}
+
+.rp-contact-us div.block:first-child {
+    border-radius: 0.5rem 5rem 0.5rem 0.5rem;
+}
+
+.rp-contact-us div.block:last-child {
+    border-radius: 0.5rem 0.5rem 5rem 0.5rem;
+}
+
+.rp-header-top {
+    top: 30% !important;
+}
+
+.rp-top-40 {
+    top: 38% !important;
+}
+
+.rp-index-footer footer {
+    margin-top: 200px;
+}
+
+.rona-modal {
+    max-width: 800px;
+}
+
+.numbered-btns div {
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline;
+}
+
+.numbered-btns div label {
+    width: 50px;
+}
+
+.bg-image {
+    /* The image used */
+    background-image: url("/public/img/banner-04.jpg") !important;
+
+    /* Add the blur effect */
+    filter: blur(50px);
+    -webkit-filter: blur(50px);
+
+    /* Full height */
+    height: 90vh;
+    margin-top: -60px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: absolute;
+    width: 100%;
+    min-height: max-content;
+    z-index: -1;
+}
+
+.rp-rounded-bottom-end {
+    border-radius: 0.5rem 0.5rem 6rem 0.5rem;
+}
+
+.contact-card {
+    border-radius: 0rem 6rem 0rem 6rem;
+}
+
+.contact-card img {
+    border-radius: 0rem 0rem 0rem 6rem;
+}
+
+
+@media (max-width: 768px) {
+    .rp-header {
+        height: 100vh;
+    }
+
+    /* .rp-header .rp-header-overlay{
+        height: 100%;
+    } */
+    .rp-header img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .title {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .sub-title {
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1rem;
+    }
+
+    .rp-header-top {
+        top: 60% !important;
+    }
+
+    .horizontal-scrollable>.row>.col {
+        display: inline-block;
+    }
+
+    .horizontal-scrollable>.row {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .rp-index-footer footer {
+        margin-top: 200px;
+    }
+
+    
+}
+
+@media (max-width: 576px) {
+    .rp-index-footer footer {
+        margin-top: 600px;
+    }
+    .rp-contact-footer footer {
+        margin-top: 300px;
+    }
+    .rp-top-40 {
+        top: 10% !important;
+    }
+    .contact-card {
+        border-radius: 6rem 0rem 6rem 0rem;
+    }
+    
+    .contact-card img {
+        border-radius: 6rem 0rem 0rem 0rem;
+    }
+}
