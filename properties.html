@@ -29,8 +29,9 @@
 <body class="position-relative">
     <nav class="navbar navbar-expand-lg navbar-dark z-1 rp-dark-transparent">
         <div class="container-fluid position-relative">
-            <img src="public/img/favicon.ico" class="img-fluid position-absolute top-0  z-1" alt="">
-            <a class="navbar-brand ms-5" href="#">
+            <img src="public/img/favicon.ico" id="ronaLogo" class="img-fluid position-absolute top-0 z-1"
+                alt="RonaProperties Logo">
+            <a class="navbar-brand ms-5" href="index.html">
                 Rona Properties
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -43,13 +44,14 @@
                         <a class="nav-link active" aria-current="page" href="properties.html">PROPERTIES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ABOUT US</a>
+                        <a class="nav-link" href="about.html">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT</a>
+                        <a class="nav-link" href="contact.html">CONTACT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">LOGIN / SIGNUP</a>
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">LOGIN /
+                            SIGNUP</a>
                     </li>
                     <li class="nav-item d-none d-md-inline-block">
                         <a class="nav-link" href="#"><i class="fa fa-lg fa-user-circle"></i></a>
@@ -75,10 +77,10 @@
 
                 <div class="col-4 col-md-2">
                     <div class="input-group">
-                        <label class="input-group-text" for="bedrooms">
+                        <label class="input-group-text" for="bedrooms1">
                             <i class="fa fa-bed fa-lg rp-text-dark"></i>
                         </label>
-                        <select class="form-select" id="bedrooms">
+                        <select class="form-select" id="bedrooms1">
                             <option value="0" selected>Any</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -93,10 +95,10 @@
                 </div>
                 <div class="col-4 col-md-2">
                     <div class="input-group">
-                        <label class="input-group-text" for="noGuests">
+                        <label class="input-group-text" for="noGuests1">
                             <i class="fa fa-users fa-lg rp-text-dark"></i>
                         </label>
-                        <select class="form-select" id="noGuests">
+                        <select class="form-select" id="noGuests1">
                             <option value="0" selected>Any</option>
                             <option value="1">1 </option>
                             <option value="2">2</option>
@@ -111,9 +113,9 @@
                 </div>
                 <div class="d-none d-md-block col-2">
                     <div class="input-group">
-                        <label class="input-group-text" for="propertyType">
+                        <label class="input-group-text" for="propertyType1">
                             <i class="fa fa-clock fa-lg rp-text-dark"></i></label>
-                        <select class="form-select" id="propertyType">
+                        <select class="form-select" id="propertyType1">
                             <option value="" selected>Any</option>
                             <option value="short">Short Stay</option>
                             <option value="rent">Rent</option>
@@ -124,9 +126,9 @@
                     <div class="input-group">
                         <span class="input-group-text">Price($)</span>
                         <input type="text" value="0" aria-label="First name" class="form-control" placeholder="Min"
-                            id="minPrice">
+                            id="minPrice1">
                         <input type="text" value="9999" aria-label="Last name" class="form-control" placeholder="Max"
-                            id="maxPrice">
+                            id="maxPrice1">
                     </div>
                 </div>
                 <div class="col-2 col-md-1 text-center">
@@ -152,217 +154,234 @@
             <!-- FILTERS END -->
 
             <div class="row my-5 py-5 justify-content-center">
-                <div class="col-10 col-md-4 col-xl-3 my-2 my-md-0">
-                    <div class="card shadow mx-auto product-card">
-                        <div class="position-relative">
-                            <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
-                            <div
-                                class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
-                                <small class="fw-bold">$20 / daily</small>
-                            </div>
-                            <div class="position-absolute top-0 end-0 z-1 m-2">
-                                <i class="fa fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-text">
-                                <small><b>Accra</b> &#x2022; Newtown</small>
-                                <div>
-                                    Listing Title
+                <div class="col-10 col-md-4 col-xl-3 my-2">
+                    <a href="property.html" class="text-decoration-none text-dark">
+                        <div class="card shadow mx-auto product-card">
+                            <div class="position-relative">
+                                <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
+                                <div
+                                    class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
+                                    <small class="fw-bold">$20 / daily</small>
                                 </div>
-                                <div class="row g-0">
-                                    <div class="col-6">
-                                        <i class="fa fa-users"></i> <b>8</b> Guests
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-bed"></i> <b>8</b> Bedrooms
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-bath"></i> <b>8</b> Bathrooms
-                                    </div>
+                                <div class="position-absolute top-0 end-0 z-1 m-2">
+                                    <i class="fa fa-heart"></i>
                                 </div>
                             </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <small><b>Accra</b> &#x2022; Newtown</small>
+                                    <div>
+                                        Listing Title
+                                    </div>
+                                    <div class="row g-0">
+                                        <div class="col-6">
+                                            <i class="fa fa-users"></i> <b>8</b> Guests
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-bed"></i> <b>8</b> Bedrooms
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-bath"></i> <b>8</b> Bathrooms
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <!-- DUPLICATES -->
-                <div class="col-10 col-md-4 col-xl-3 my-2 my-md-0">
-                    <div class="card shadow mx-auto product-card">
-                        <div class="position-relative">
-                            <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
-                            <div class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
-                                <small class="fw-bold">$20 / daily</small>
-                            </div>
-                            <div class="position-absolute top-0 end-0 z-1 m-2">
-                                <i class="fa fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-text">
-                                <small><b>Accra</b> &#x2022; Newtown</small>
-                                <div>
-                                    Listing Title
+                <div class="col-10 col-md-4 col-xl-3 my-2">
+                    <a href="property.html" class="text-decoration-none text-dark">
+                        <div class="card shadow mx-auto product-card">
+                            <div class="position-relative">
+                                <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
+                                <div
+                                    class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
+                                    <small class="fw-bold">$20 / daily</small>
                                 </div>
-                                <div class="row g-0">
-                                    <div class="col-6">
-                                        <i class="fa fa-users"></i> <b>8</b> Guests
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-bed"></i> <b>8</b> Bedrooms
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-bath"></i> <b>8</b> Bathrooms
-                                    </div>
+                                <div class="position-absolute top-0 end-0 z-1 m-2">
+                                    <i class="fa fa-heart"></i>
                                 </div>
                             </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <small><b>Accra</b> &#x2022; Newtown</small>
+                                    <div>
+                                        Listing Title
+                                    </div>
+                                    <div class="row g-0">
+                                        <div class="col-6">
+                                            <i class="fa fa-users"></i> <b>8</b> Guests
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-bed"></i> <b>8</b> Bedrooms
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-bath"></i> <b>8</b> Bathrooms
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col-10 col-md-4 col-xl-3 my-2 my-md-0">
-                    <div class="card shadow mx-auto product-card">
-                        <div class="position-relative">
-                            <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
-                            <div class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
-                                <small class="fw-bold">$20 / daily</small>
-                            </div>
-                            <div class="position-absolute top-0 end-0 z-1 m-2">
-                                <i class="fa fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-text">
-                                <small><b>Accra</b> &#x2022; Newtown</small>
-                                <div>
-                                    Listing Title
+                <div class="col-10 col-md-4 col-xl-3 my-2">
+                    <a href="property.html" class="text-decoration-none text-dark">
+                        <div class="card shadow mx-auto product-card">
+                            <div class="position-relative">
+                                <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
+                                <div
+                                    class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
+                                    <small class="fw-bold">$20 / daily</small>
                                 </div>
-                                <div class="row g-0">
-                                    <div class="col-6">
-                                        <i class="fa fa-users"></i> <b>8</b> Guests
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-bed"></i> <b>8</b> Bedrooms
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-bath"></i> <b>8</b> Bathrooms
-                                    </div>
+                                <div class="position-absolute top-0 end-0 z-1 m-2">
+                                    <i class="fa fa-heart"></i>
                                 </div>
                             </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <small><b>Accra</b> &#x2022; Newtown</small>
+                                    <div>
+                                        Listing Title
+                                    </div>
+                                    <div class="row g-0">
+                                        <div class="col-6">
+                                            <i class="fa fa-users"></i> <b>8</b> Guests
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-bed"></i> <b>8</b> Bedrooms
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-bath"></i> <b>8</b> Bathrooms
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col-10 col-md-4 col-xl-3 my-2 my-md-0">
-                    <div class="card shadow mx-auto product-card">
-                        <div class="position-relative">
-                            <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
-                            <div class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
-                                <small class="fw-bold">$20 / daily</small>
-                            </div>
-                            <div class="position-absolute top-0 end-0 z-1 m-2">
-                                <i class="fa fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-text">
-                                <small><b>Accra</b> &#x2022; Newtown</small>
-                                <div>
-                                    Listing Title
+                <div class="col-10 col-md-4 col-xl-3 my-2">
+                    <a href="property.html" class="text-decoration-none text-dark">
+                        <div class="card shadow mx-auto product-card">
+                            <div class="position-relative">
+                                <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
+                                <div
+                                    class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
+                                    <small class="fw-bold">$20 / daily</small>
                                 </div>
-                                <div class="row g-0">
-                                    <div class="col-6">
-                                        <i class="fa fa-users"></i> <b>8</b> Guests
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-bed"></i> <b>8</b> Bedrooms
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-bath"></i> <b>8</b> Bathrooms
-                                    </div>
+                                <div class="position-absolute top-0 end-0 z-1 m-2">
+                                    <i class="fa fa-heart"></i>
                                 </div>
                             </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <small><b>Accra</b> &#x2022; Newtown</small>
+                                    <div>
+                                        Listing Title
+                                    </div>
+                                    <div class="row g-0">
+                                        <div class="col-6">
+                                            <i class="fa fa-users"></i> <b>8</b> Guests
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-bed"></i> <b>8</b> Bedrooms
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-bath"></i> <b>8</b> Bathrooms
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col-10 col-md-4 col-xl-3 my-2 my-md-0">
-                    <div class="card shadow mx-auto product-card">
-                        <div class="position-relative">
-                            <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
-                            <div class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
-                                <small class="fw-bold">$20 / daily</small>
-                            </div>
-                            <div class="position-absolute top-0 end-0 z-1 m-2">
-                                <i class="fa fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-text">
-                                <small><b>Accra</b> &#x2022; Newtown</small>
-                                <div>
-                                    Listing Title
+                <div class="col-10 col-md-4 col-xl-3 my-2">
+                    <a href="property.html" class="text-decoration-none text-dark">
+                        <div class="card shadow mx-auto product-card">
+                            <div class="position-relative">
+                                <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
+                                <div
+                                    class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
+                                    <small class="fw-bold">$20 / daily</small>
                                 </div>
-                                <div class="row g-0">
-                                    <div class="col-6">
-                                        <i class="fa fa-users"></i> <b>8</b> Guests
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-bed"></i> <b>8</b> Bedrooms
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-bath"></i> <b>8</b> Bathrooms
-                                    </div>
+                                <div class="position-absolute top-0 end-0 z-1 m-2">
+                                    <i class="fa fa-heart"></i>
                                 </div>
                             </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <small><b>Accra</b> &#x2022; Newtown</small>
+                                    <div>
+                                        Listing Title
+                                    </div>
+                                    <div class="row g-0">
+                                        <div class="col-6">
+                                            <i class="fa fa-users"></i> <b>8</b> Guests
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-bed"></i> <b>8</b> Bedrooms
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-bath"></i> <b>8</b> Bathrooms
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col-10 col-md-4 col-xl-3 my-2 my-md-0">
-                    <div class="card shadow mx-auto product-card">
-                        <div class="position-relative">
-                            <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
-                            <div class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
-                                <small class="fw-bold">$20 / daily</small>
-                            </div>
-                            <div class="position-absolute top-0 end-0 z-1 m-2">
-                                <i class="fa fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-text">
-                                <small><b>Accra</b> &#x2022; Newtown</small>
-                                <div>
-                                    Listing Title
+                <div class="col-10 col-md-4 col-xl-3 my-2">
+                    <a href="property.html" class="text-decoration-none text-dark">
+                        <div class="card shadow mx-auto product-card">
+                            <div class="position-relative">
+                                <img src="public/img/banner-01.jpg" class="card-img-top rp-product-card-image" alt="...">
+                                <div
+                                    class="position-absolute top-0 z-1 bg-light text-dark py-0 px-2 m-2 rp-product-card-tag">
+                                    <small class="fw-bold">$20 / daily</small>
                                 </div>
-                                <div class="row g-0">
-                                    <div class="col-6">
-                                        <i class="fa fa-users"></i> <b>8</b> Guests
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-bed"></i> <b>8</b> Bedrooms
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-bath"></i> <b>8</b> Bathrooms
-                                    </div>
+                                <div class="position-absolute top-0 end-0 z-1 m-2">
+                                    <i class="fa fa-heart"></i>
                                 </div>
                             </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <small><b>Accra</b> &#x2022; Newtown</small>
+                                    <div>
+                                        Listing Title
+                                    </div>
+                                    <div class="row g-0">
+                                        <div class="col-6">
+                                            <i class="fa fa-users"></i> <b>8</b> Guests
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-bed"></i> <b>8</b> Bedrooms
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-crosshairs"></i> <b>8</b> m<sup>2</sup>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-bath"></i> <b>8</b> Bathrooms
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <!-- END OF DUPLICATES -->
             </div>
@@ -464,40 +483,48 @@
                         <p class="text-black my-2">Guests</p>
                         <div class="numbered-btns ps-4 text-center text-md-start">
                             <div>
-                                <input type="radio" class="btn-check" name="noGuests" id="bedAny" autocomplete="off"
-                                    checked>
+                                <input type="radio" class="btn-check" name="noGuests" value="0" id="bedAny"
+                                    autocomplete="off" checked>
                                 <label class="btn btn-outline-secondary rounded-pill px-0" for="bedAny"> Any</label>
                             </div>
                             <div>
-                                <input type="radio" class="btn-check" name="noGuests" id="guest1" autocomplete="off">
+                                <input type="radio" class="btn-check" name="noGuests" value="1" id="guest1"
+                                    autocomplete="off">
                                 <label class="btn btn-outline-secondary rounded-pill" for="guest1">1</label>
                             </div>
                             <div>
-                                <input type="radio" class="btn-check" name="noGuests" id="guest2" autocomplete="off">
+                                <input type="radio" class="btn-check" name="noGuests" value="2" id="guest2"
+                                    autocomplete="off">
                                 <label class="btn btn-outline-secondary rounded-pill" for="guest2">2</label>
                             </div>
                             <div>
-                                <input type="radio" class="btn-check" name="noGuests" id="guest3" autocomplete="off">
+                                <input type="radio" class="btn-check" name="noGuests" value="3" id="guest3"
+                                    autocomplete="off">
                                 <label class="btn btn-outline-secondary rounded-pill" for="guest3">3</label>
                             </div>
                             <div>
-                                <input type="radio" class="btn-check" name="noGuests" id="guest4" autocomplete="off">
+                                <input type="radio" class="btn-check" name="noGuests" value="4" id="guest4"
+                                    autocomplete="off">
                                 <label class="btn btn-outline-secondary rounded-pill" for="guest4">4</label>
                             </div>
                             <div>
-                                <input type="radio" class="btn-check" name="noGuests" id="guest5" autocomplete="off">
+                                <input type="radio" class="btn-check" name="noGuests" value="5" id="guest5"
+                                    autocomplete="off">
                                 <label class="btn btn-outline-secondary rounded-pill" for="guest5">5</label>
                             </div>
                             <div>
-                                <input type="radio" class="btn-check" name="noGuests" id="guest6" autocomplete="off">
+                                <input type="radio" class="btn-check" name="noGuests" value="6" id="guest6"
+                                    autocomplete="off">
                                 <label class="btn btn-outline-secondary rounded-pill" for="guest6">6</label>
                             </div>
                             <div>
-                                <input type="radio" class="btn-check" name="noGuests" id="guest7" autocomplete="off">
+                                <input type="radio" class="btn-check" name="noGuests" value="7" id="guest7"
+                                    autocomplete="off">
                                 <label class="btn btn-outline-secondary rounded-pill" for="guest7">7</label>
                             </div>
                             <div>
-                                <input type="radio" class="btn-check" name="noGuests" id="guest8" autocomplete="off">
+                                <input type="radio" class="btn-check" name="noGuests" value="8" id="guest8"
+                                    autocomplete="off">
                                 <label class="btn btn-outline-secondary rounded-pill" for="guest8">8+</label>
                             </div>
                         </div>
@@ -608,6 +635,71 @@
             </div>
         </form>
     </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <form action="#" method="post">
+            <div class="modal-dialog rona-modal login-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-center" id="loginModalLabel">
+                            Login or Signup
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="lead">Welcome to Rona Properties</p>
+
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">Country/Region</label>
+                            <select class="form-select" id="inputGroupSelect01">
+                                <option selected>Choose...</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Number</span>
+                            <span class="input-group-text">+233</span>
+                            <input type="text" class="form-control"
+                                aria-label="Dollar amount (with dot and two decimal places)">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Email</span>
+                            <input type="email" class="form-control" name="email" id="loginEmail">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Password</span>
+                            <input type="password" class="form-control" name="password" id="loginPassword">
+                        </div>
+
+                        <p>
+                            *Disclaimer
+                        </p>
+                        <div class="w-100">
+                            <input type="submit" id="continue" value="Continue"
+                                class="btn btn-primary w-100 text-center" />
+                        </div>
+                        <hr>
+                        <div class="w-100">
+                            <button class="w-100 btn btn-outline-secondary text-dark">
+                                <i class="fab fa-facebook-square text-primary fa-lg"></i> Continue with Facebook
+                            </button>
+                        </div>
+                        <div class="w-100">
+                            <button class="w-100 btn btn-outline-secondary text-dark">
+                                <i class="fab fa-google text-primary fa-lg"></i> Continue with Google
+                            </button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- END OF MODALS -->
 
 
 
@@ -642,13 +734,19 @@
                         <div class="mt-4">
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                <li class="fa-brands fa-square-facebook fa-xl"></li>
+                                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                        <span class="fa-brands fa-square-facebook fa-xl"></span>
+                                    </a>
                                 </li>
                                 <li class="list-inline-item">
-                                <li class="fa-brands fa-square-youtube fa-xl"></li>
+                                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <span class="fa-brands fa-square-youtube fa-xl"></span>
+                                    </a>
                                 </li>
                                 <li class="list-inline-item">
-                                <li class="fa-brands fa-whatsapp fa-xl"></li>
+                                    <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+                                        <span class="fa-brands fa-whatsapp fa-xl"></span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -679,7 +777,8 @@
                             </div>
                         </div>
 
-                        <button class="btn bg-secondary text-white btn-lg px-5 mt-1 mt-md-3">SEND</button>
+                        <button id="messageSend"
+                            class="btn bg-secondary text-white btn-lg px-5 mt-1 mt-md-3">SEND</button>
 
                     </div>
                 </div>
@@ -705,13 +804,19 @@
 
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                <li class="fa-brands fa-square-facebook fa-sm"></li>
+                                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                        <span class="fa-brands fa-square-facebook fa-sm"></span>
+                                    </a>
                                 </li>
                                 <li class="list-inline-item">
-                                <li class="fa-brands fa-square-youtube fa-sm"></li>
+                                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <span class="fa-brands fa-square-youtube fa-sm"></span>
+                                    </a>
                                 </li>
                                 <li class="list-inline-item">
-                                <li class="fa-brands fa-whatsapp fa-sm"></li>
+                                    <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+                                        <span class="fa-brands fa-whatsapp fa-sm"></span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -720,11 +825,21 @@
                 <div class="row">
                     <div class="col-12 col-sm-6 text-start">
                         <ul class="list-inline">
-                            <li class="list-inline-item">Terms<span class="d-none d-md-inline"> and Conditions</span>
+                            <li class="list-inline-item">
+                                <a href="tnc.html">
+                                    Terms<span class="d-none d-md-inline"> and Conditions</span>
+                                </a>
                             </li>
-                            <li class="list-inline-item">Privacy<span class="d-none d-xl-inline"> Notice and
-                                    Cookies</span></li>
-                            <li class="list-inline-item">Contact</li>
+                            <li class="list-inline-item">
+                                <a href="tnc.html">
+                                    Privacy<span class="d-none d-xl-inline"> Notice and Cookies</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="contact.html">
+                                    Contact
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-12 col-sm-6 text-start text-md-end">
@@ -739,7 +854,8 @@
 
 
     <script src="public/vendor/jquery/jquery.min.js"></script>
-    <script src="public/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="public/js/custom.js"></script>
 
 </body>
 

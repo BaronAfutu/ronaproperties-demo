@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="public/img/favicon.ico">
+    <title>Rona Properties</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Feather Icons CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.1/feather.min.js"
+        integrity="sha512-4lykFR6C2W55I60sYddEGjieC2fU79R7GUtaqr3DzmNbo0vSaO1MfUjMoTFYYuedjfEix6uV9jVTtRCSBU/Xiw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link href="public/css/input-animate.css" rel="stylesheet">
+    <link href="public/css/primary.css" rel="stylesheet">
+
+</head>
+
+<body class="position-relative">
+    <nav class="navbar navbar-expand-lg navbar-dark z-1 rp-dark-transparent">
+        <div class="container-fluid position-relative">
+            <img src="public/img/favicon.ico" id="ronaLogo" class="img-fluid position-absolute top-0 z-1"
+                alt="RonaProperties Logo">
+            <a class="navbar-brand ms-5" href="index.html">
+                Rona Properties
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse  justify-content-end" id="navbarText">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="properties.html">PROPERTIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">LOGIN /
+                            SIGNUP</a>
+                    </li>
+                    <li class="nav-item d-none d-md-inline-block">
+                        <a class="nav-link" href="#"><i class="fa fa-lg fa-user-circle"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container px-1 px-md-5 mt-5">
+        <a class="h1" href="property.html?d=3&w=2">
+            <span class="fa fa-chevron-left"></span>
+            Request to book
+        </a>
+        <div class="row mx-0" >
+            <div class="col-12 col-md-5 order-md-1">
+                <div class="sticky-md-top ">
+                    <div class="card my-5 mx-xl-5 py-3 rp-shadow">
+                        <div class="card-body">
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="public/img/banner.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-8">
+                                    <h5>Listing Title 1</h5>
+                                    Accra
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="">
+                                <div class="row mt-4">
+                                    <div class="col-12 mb-3 fw-bold h3">
+                                        Price Details
+                                    </div>
+                                </div>
+                                <div class="row my-2">
+                                    <input type="hidden" id="rate" value="40">
+                                    <div id="periodCost" class="col-6 text-start text-decoration-underline">
+                                        $40.20 &times; 3 nights
+                                    </div>
+
+                                    <div id="cost" class="col-6 text-end">
+                                        $120.60
+                                    </div>
+                                </div>
+
+                                <div class="row my-2">
+                                    <input type="hidden" id="fee" value="30.00">
+                                    <div class="col-6 text-start text-decoration-underline">
+                                        Service Fee
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        $ 30.00
+                                    </div>
+                                </div>
+                                <hr class="my-3">
+                                <div class="row">
+                                    <div class="col-6 text-start fw-bold">
+                                        Total (USD)
+                                    </div>
+                                    <div id="total" class="col-6 text-end">
+                                        $150.60
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-7 order-md-0">
+                <input type="hidden" value="listingid" id="listing" data-rate="40" data-fee="30"
+                    data-title="Listing Title 1">
+
+                <input type="hidden" value="userid" id="customer" data-email="" data-phone="+2332342433">
+
+                <input type="hidden" value="" id="booking" data-start="1702857600000" data-end="1703376000000">
+
+                <div class="ps-0 mt-1 mt-md-5">
+                    <div class="h2">Your trip</div>
+
+                    <ul class="my-3 mb-md-5">
+                        <li>
+                            <div class="h3">Dates</div>
+                            <h5>
+                                Dec 6-9
+                            </h5>
+                        </li>
+                        <li>
+                            <div class="h3">Guests</div>
+                            <h5>
+                                3
+                            </h5>
+                        </li>
+                    </ul>
+
+                    <hr>
+
+                    <div class="my-3 my-md-5">
+                        <div class="h3">Billing Address</div>
+                        <label for="streetAddress" class="inp">
+                            <input type="text" id="streetAddress" placeholder="&nbsp;">
+                            <span class="label">Street Address</span>
+                            <span class="focus-bg"></span>
+                        </label>
+                        <label for="aptNumber" class="inp">
+                            <input type="text" id="aptNumber" placeholder="&nbsp;">
+                            <span class="label">Apt or Home Number</span>
+                            <span class="focus-bg"></span>
+                        </label>
+                        <label for="city" class="inp">
+                            <input type="text" id="city" placeholder="&nbsp;">
+                            <span class="label">City</span>
+                            <span class="focus-bg"></span>
+                        </label>
+                        <div class="row">
+                            <div class="col-8 col-md-9">
+                                <select name="country" id="country" class="form-select" aria-label="Select country">
+                                    <option selected>Country</option>
+                                    <option value="usa">USA</option>
+                                    <option value="can">Canada</option>
+                                </select>
+                            </div>
+                            <div class="col-4 col-md-3 text-md-end text-center">
+                                <button id="saveBillingInfo" class="btn w-75 rp-bg-primary">
+                                    Save
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <!-- <label for="country" class="inp">
+                            <input type="text" id="country" placeholder="&nbsp;">
+                            <span class="label">Country</span>
+                            <span class="focus-bg"></span>
+                        </label> -->
+                    </div>
+                    <hr>
+
+                    <div class="my-5">
+                        <h3>Cancellation policy</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae porro saepe esse impedit
+                            iste
+                            similique asperiores, quidem nulla et vel nesciunt qui ab perspiciatis temporibus dicta
+                            voluptas
+                            a,
+                            consequatur ullam?
+                        </p>
+                    </div>
+                    <div class="my-5">
+                        <h3>Ground rules</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae porro saepe esse impedit
+                            iste
+                            similique asperiores, quidem nulla et vel nesciunt qui ab perspiciatis temporibus dicta
+                            voluptas
+                            a,
+                            consequatur ullam?
+                        </p>
+                    </div>
+                    <div class="w-100 text-center">
+                        <button id="payBtn" class="btn rp-bg-primary btn-lg w-50">
+                            Make Payment
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODALS -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <form action="#" method="post">
+            <div class="modal-dialog rona-modal login-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-center" id="loginModalLabel">
+                            Login or Signup
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="lead">Welcome to Rona Properties</p>
+
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">Country/Region</label>
+                            <select class="form-select" id="inputGroupSelect01">
+                                <option selected>Choose...</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Number</span>
+                            <span class="input-group-text">+233</span>
+                            <input type="text" class="form-control"
+                                aria-label="Dollar amount (with dot and two decimal places)">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Email</span>
+                            <input type="email" class="form-control" name="email" id="loginEmail">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Password</span>
+                            <input type="password" class="form-control" name="password" id="loginPassword">
+                        </div>
+
+                        <p>
+                            *Disclaimer
+                        </p>
+                        <div class="w-100">
+                            <input type="submit" id="continue" value="Continue"
+                                class="btn btn-primary w-100 text-center" />
+                        </div>
+                        <hr>
+                        <div class="w-100">
+                            <button class="w-100 btn btn-outline-secondary text-dark">
+                                <i class="fab fa-facebook-square text-primary fa-lg"></i> Continue with Facebook
+                            </button>
+                        </div>
+                        <div class="w-100">
+                            <button class="w-100 btn btn-outline-secondary text-dark">
+                                <i class="fab fa-google text-primary fa-lg"></i> Continue with Google
+                            </button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- END OF MODALS -->
+
+
+    <div class="container-fluid px-0 mt-5 rp-bg-secondary">
+
+        <div class="container mt-5">
+            <footer class="mb-5">
+                <div class="row justify-content-between">
+                    <div class="col-12 col-md-6">
+                        <p class="fw-bold text-uppercase h2">Rona Properties</p>
+                        <P>
+                            We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut
+                        </P>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <p class="fw-bold h2">Connect with us</p>
+                        <div>
+                            +00 000 000 00 <br>
+                            info@ronaproperties.com <br>
+
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                        <span class="fa-brands fa-square-facebook fa-sm"></span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                        <span class="fa-brands fa-square-youtube fa-sm"></span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+                                        <span class="fa-brands fa-whatsapp fa-sm"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6 text-start">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="tnc.html">
+                                    Terms<span class="d-none d-md-inline"> and Conditions</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="tnc.html">
+                                    Privacy<span class="d-none d-xl-inline"> Notice and Cookies</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="contact.html">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-6 text-start text-md-end">
+                        Rona Properties | © All rights reserved 2023
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+
+
+    <script src="public/vendor/jquery/jquery.min.js"></script>
+    <script src="public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="public/js/moment.min.js"></script>
+    <script src="public/js/custom.js"></script>
+
+    <!-- <script>
+        fetch('https://api.ipregistry.co/?key=tryout')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (payload) {
+                console.log(payload)
+                console.log(payload.location.country.name + ', ' + payload.location.city);
+            });
+    </script> -->
+
+</body>
+
+</html>
